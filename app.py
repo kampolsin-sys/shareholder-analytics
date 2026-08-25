@@ -592,8 +592,6 @@ with tab1:
                             with open("shareable_report.html", "w", encoding="utf-8") as f:
                                 f.write(full_html)
                                 
-                            st.markdown(f'<a href="/?view=report" target="_blank" style="display: inline-block; padding: 10px 20px; background-color: #3b82f6; color: white; text-decoration: none; border-radius: 8px; font-weight: bold; margin-bottom: 20px;">🌐 เปิดหน้าวิวตารางสวยงาม (สำหรับแชร์)</a>', unsafe_allow_html=True)
-                            
                             st.info("💡 **แชร์ตารางให้ผู้บริหารหรือทีมงาน:** ก๊อปปี้ลิงก์ด้านล่างนี้ส่งให้ได้เลยครับ (คนที่ได้รับลิงก์จะเห็นแค่ตาราง ไม่ต้องล็อกอินครับ)")
                             st.code("https://shareholder-analytics-jirxoabos6p7vvqkq8njfe.streamlit.app/?view=report", language="text")
 
