@@ -101,13 +101,12 @@ st.markdown("""
     /* Global CSS Tweaks */
     #MainMenu {visibility: hidden;}
     .stAppDeployButton {display: none;}
-    [data-testid="stToolbar"] {visibility: hidden;}
     footer {visibility: hidden;}
     [data-testid="stDataFrame"] {
         background-color: #ffffff;
     }
     .block-container {
-        padding-top: 1.5rem;
+        padding-top: 4rem;
     }
     .stTabs [data-baseweb="tab-list"] {
         gap: 20px;
