@@ -275,7 +275,20 @@ with tab1:
                             
                         # Add Difference column if >= 2 periods
                         diff_col_name = 'เพิ่มขึ้น / (ลดลง)'
+
+                        def color_empty(val):
+                            if pd.isna(val) or val == 0 or val == "-":
+                                return "color: #9ca3af;"
+                            return ""
+                            
+                        cols_to_color = [c for c in comp_df.columns if c[1] in ["จำนวนหุ้น", "%"]]
+                        if hasattr(styled_df, "map"):
+                            styled_df = styled_df.map(color_empty, subset=cols_to_color)
+                        else:
+                            styled_df = styled_df.applymap(color_empty, subset=cols_to_color)
+                            
                         if len(ordered_periods) >= 2:
+
                             period_new = ordered_periods[-1] # latest
                             period_old = ordered_periods[-2] # previous
                             
@@ -354,7 +367,7 @@ with tab1:
                                 if v > 0:
                                     return f'<div style="display:flex; justify-content:space-between;"><span>▲</span><span>{v:,.0f}</span></div>'
                                 elif v < 0:
-                                    return f'<div style="display:flex; justify-content:space-between;"><span>▼</span><span>{abs(v):,.0f}</span></div>'
+                                    return f'<div style="display:flex; justify-content:space-between;"><span>▼</span><span>-{abs(v):,.0f}</span></div>'
                                 return "-"
                             except:
                                 return str(val)
@@ -392,7 +405,7 @@ with tab1:
                         if len(ordered_periods) >= 2:
                             def color_diff(val):
                                 if pd.isna(val) or val == 0 or val == "-":
-                                    return ''
+                                    return 'color: #9ca3af;'
                                 try:
                                     v = float(val)
                                     if v > 0:
