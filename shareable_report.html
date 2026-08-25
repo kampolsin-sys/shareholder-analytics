@@ -1,0 +1,1614 @@
+
+                            <div style="font-family: 'Sarabun', sans-serif;">
+                                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                                    <div></div>
+                                    <div style="text-align: center;">
+                                        <h2 style="color: #1e3a8a; margin-bottom: 5px;">📊 ตารางเปรียบเทียบรายชื่อผู้ถือหุ้น</h2>
+                                        <p style="color: #64748b; margin-top: 0;">ข้อมูล ณ วันที่ 17-07-69</p>
+                                    </div>
+                                    <div>
+                                        <button onclick="navigator.clipboard.writeText(window.location.href).then(() => alert('คัดลอกลิงก์เรียบร้อยแล้ว! สามารถส่งให้คนอื่นเพื่อเปิดหน้านี้ได้ทันทีครับ'));" style="padding: 10px 16px; background-color: #10b981; color: white; border: none; border-radius: 8px; font-size: 15px; font-weight: bold; cursor: pointer; box-shadow: 0 2px 4px rgba(0,0,0,0.1); transition: background-color 0.2s;">
+                                            🔗 คัดลอกลิงก์สำหรับแชร์
+                                        </button>
+                                    </div>
+                                </div>
+
+<style>
+.table-container {
+    max-height: 700px;
+    overflow: auto;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+.table-container table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14.5px;
+    background-color: #ffffff;
+}
+.table-container th, .table-container td {
+    border: 1px solid #e2e8f0;
+    padding: 10px 14px;
+}
+.table-container td {
+    white-space: nowrap;
+}
+.table-container td:nth-child(2) {
+    white-space: normal;
+    min-width: 300px;
+}
+.table-container th {
+    background-color: #f8fafc !important;
+    color: #1e293b !important;
+    font-weight: 600;
+}
+.table-container thead th {
+    position: sticky;
+    z-index: 2;
+}
+.table-container thead tr:nth-child(1) th {
+    top: 0;
+}
+.table-container thead tr:nth-child(2) th {
+    top: 42px;
+}
+.table-container tbody tr:hover {
+    background-color: #f1f5f9;
+}
+</style>
+
+                                <div class="table-container">
+                                    <style type="text/css">
+#T_bd95c th {
+  text-align: center !important;
+  vertical-align: middle !important;
+  background-color: #f0f2f6;
+}
+#T_bd95c td {
+  text-align: right;
+}
+#T_bd95c td:nth-child(1) {
+  text-align: left;
+}
+#T_bd95c  td:nth-child(2) {
+  text-align: left;
+}
+#T_bd95c_row3_col5, #T_bd95c_row8_col5, #T_bd95c_row9_col5, #T_bd95c_row14_col5, #T_bd95c_row22_col5, #T_bd95c_row26_col5, #T_bd95c_row27_col5, #T_bd95c_row31_col5, #T_bd95c_row35_col5, #T_bd95c_row36_col5, #T_bd95c_row38_col5, #T_bd95c_row39_col5, #T_bd95c_row40_col5, #T_bd95c_row47_col5, #T_bd95c_row52_col5, #T_bd95c_row53_col5, #T_bd95c_row57_col5, #T_bd95c_row60_col5, #T_bd95c_row69_col5, #T_bd95c_row72_col5, #T_bd95c_row73_col5, #T_bd95c_row76_col5, #T_bd95c_row80_col5, #T_bd95c_row84_col5, #T_bd95c_row93_col5, #T_bd95c_row95_col5, #T_bd95c_row100_col5, #T_bd95c_row108_col5, #T_bd95c_row109_col5, #T_bd95c_row111_col5, #T_bd95c_row115_col5, #T_bd95c_row117_col5, #T_bd95c_row121_col5, #T_bd95c_row122_col5, #T_bd95c_row123_col5, #T_bd95c_row124_col5, #T_bd95c_row128_col5, #T_bd95c_row129_col5, #T_bd95c_row132_col5, #T_bd95c_row133_col5, #T_bd95c_row145_col5, #T_bd95c_row149_col5, #T_bd95c_row153_col5, #T_bd95c_row160_col5, #T_bd95c_row165_col5, #T_bd95c_row177_col5 {
+  color: #00cc00;
+}
+#T_bd95c_row5_col5, #T_bd95c_row11_col5, #T_bd95c_row12_col5, #T_bd95c_row23_col5, #T_bd95c_row25_col5, #T_bd95c_row30_col5, #T_bd95c_row34_col5, #T_bd95c_row37_col5, #T_bd95c_row44_col5, #T_bd95c_row45_col5, #T_bd95c_row48_col5, #T_bd95c_row55_col5, #T_bd95c_row64_col5, #T_bd95c_row66_col5, #T_bd95c_row77_col5, #T_bd95c_row82_col5, #T_bd95c_row91_col5, #T_bd95c_row92_col5, #T_bd95c_row94_col5, #T_bd95c_row101_col5, #T_bd95c_row113_col5, #T_bd95c_row125_col5, #T_bd95c_row126_col5, #T_bd95c_row131_col5, #T_bd95c_row135_col5, #T_bd95c_row142_col5, #T_bd95c_row144_col5, #T_bd95c_row147_col5, #T_bd95c_row154_col5, #T_bd95c_row156_col5, #T_bd95c_row157_col5, #T_bd95c_row162_col5, #T_bd95c_row163_col5 {
+  color: #ff0000;
+}
+#T_bd95c_row184_col0, #T_bd95c_row184_col1, #T_bd95c_row184_col2, #T_bd95c_row184_col3, #T_bd95c_row184_col4, #T_bd95c_row185_col0, #T_bd95c_row185_col1, #T_bd95c_row185_col2, #T_bd95c_row185_col3, #T_bd95c_row185_col4, #T_bd95c_row186_col0, #T_bd95c_row186_col1, #T_bd95c_row186_col2, #T_bd95c_row186_col3, #T_bd95c_row186_col4, #T_bd95c_row186_col5 {
+  font-weight: bold;
+}
+#T_bd95c_row184_col5 {
+  font-weight: bold;
+  color: #00cc00;
+}
+#T_bd95c_row185_col5 {
+  font-weight: bold;
+  color: #ff0000;
+}
+</style>
+<table id="T_bd95c">
+  <thead>
+    <tr>
+      <th id="T_bd95c_level0_col0" class="col_heading level0 col0" colspan="2"></th>
+      <th id="T_bd95c_level0_col2" class="col_heading level0 col2" >12-06-69</th>
+      <th id="T_bd95c_level0_col3" class="col_heading level0 col3" colspan="2">17-07-69</th>
+      <th id="T_bd95c_level0_col5" class="col_heading level0 col5" >12-06-69 VS 17-07-69</th>
+    </tr>
+    <tr>
+      <th id="T_bd95c_level1_col0" class="col_heading level1 col0" >ลำดับ</th>
+      <th id="T_bd95c_level1_col1" class="col_heading level1 col1" >รายชื่อผู้ถือหุ้น</th>
+      <th id="T_bd95c_level1_col2" class="col_heading level1 col2" >จำนวนหุ้น</th>
+      <th id="T_bd95c_level1_col3" class="col_heading level1 col3" >จำนวนหุ้น</th>
+      <th id="T_bd95c_level1_col4" class="col_heading level1 col4" >%</th>
+      <th id="T_bd95c_level1_col5" class="col_heading level1 col5" >จำนวนหุ้น เพิ่มขึ้น / (ลดลง)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td id="T_bd95c_row0_col0" class="data row0 col0" >1</td>
+      <td id="T_bd95c_row0_col1" class="data row0 col1" >บริษัท ช.การช่าง จำกัด (มหาชน)</td>
+      <td id="T_bd95c_row0_col2" class="data row0 col2" >6,459,449,984</td>
+      <td id="T_bd95c_row0_col3" class="data row0 col3" >6,459,449,984</td>
+      <td id="T_bd95c_row0_col4" class="data row0 col4" >42.2601%</td>
+      <td id="T_bd95c_row0_col5" class="data row0 col5" >-</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row1_col0" class="data row1 col0" >2</td>
+      <td id="T_bd95c_row1_col1" class="data row1 col1" >การรถไฟฟ้าขนส่งมวลชนแห่งประเทศไทย</td>
+      <td id="T_bd95c_row1_col2" class="data row1 col2" >1,256,259,584</td>
+      <td id="T_bd95c_row1_col3" class="data row1 col3" >1,256,259,584</td>
+      <td id="T_bd95c_row1_col4" class="data row1 col4" >8.2189%</td>
+      <td id="T_bd95c_row1_col5" class="data row1 col5" >-</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row2_col0" class="data row2 col0" >3</td>
+      <td id="T_bd95c_row2_col1" class="data row2 col1" >ธนาคาร กรุงไทย จำกัด (มหาชน)</td>
+      <td id="T_bd95c_row2_col2" class="data row2 col2" >815,356,075</td>
+      <td id="T_bd95c_row2_col3" class="data row2 col3" >815,356,075</td>
+      <td id="T_bd95c_row2_col4" class="data row2 col4" >5.3344%</td>
+      <td id="T_bd95c_row2_col5" class="data row2 col5" >-</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row3_col0" class="data row3 col0" >4</td>
+      <td id="T_bd95c_row3_col1" class="data row3 col1" >บริษัท ไทยเอ็นวีดีอาร์ จำกัด</td>
+      <td id="T_bd95c_row3_col2" class="data row3 col2" >473,213,866</td>
+      <td id="T_bd95c_row3_col3" class="data row3 col3" >545,771,501</td>
+      <td id="T_bd95c_row3_col4" class="data row3 col4" >3.5706%</td>
+      <td id="T_bd95c_row3_col5" class="data row3 col5" >▲ 72,557,635</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row4_col0" class="data row4 col0" >5</td>
+      <td id="T_bd95c_row4_col1" class="data row4 col1" >สำนักงานประกันสังคม</td>
+      <td id="T_bd95c_row4_col2" class="data row4 col2" >465,669,067</td>
+      <td id="T_bd95c_row4_col3" class="data row4 col3" >465,669,067</td>
+      <td id="T_bd95c_row4_col4" class="data row4 col4" >3.0466%</td>
+      <td id="T_bd95c_row4_col5" class="data row4 col5" >-</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row5_col0" class="data row5 col0" >6</td>
+      <td id="T_bd95c_row5_col1" class="data row5 col1" >นายวิชัย วชิรพงศ์</td>
+      <td id="T_bd95c_row5_col2" class="data row5 col2" >341,631,557</td>
+      <td id="T_bd95c_row5_col3" class="data row5 col3" >340,631,557</td>
+      <td id="T_bd95c_row5_col4" class="data row5 col4" >2.2285%</td>
+      <td id="T_bd95c_row5_col5" class="data row5 col5" >▼ 1,000,000</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row6_col0" class="data row6 col0" >7</td>
+      <td id="T_bd95c_row6_col1" class="data row6 col1" >บริษัท ทางด่วนและรถไฟฟ้ากรุงเทพ จำกัด (มหาชน)</td>
+      <td id="T_bd95c_row6_col2" class="data row6 col2" >307,123,500</td>
+      <td id="T_bd95c_row6_col3" class="data row6 col3" >307,123,500</td>
+      <td id="T_bd95c_row6_col4" class="data row6 col4" >2.0093%</td>
+      <td id="T_bd95c_row6_col5" class="data row6 col5" >-</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row7_col0" class="data row7 col0" >8</td>
+      <td id="T_bd95c_row7_col1" class="data row7 col1" >ธนาคาร กรุงเทพ จำกัด (มหาชน)</td>
+      <td id="T_bd95c_row7_col2" class="data row7 col2" >303,448,709</td>
+      <td id="T_bd95c_row7_col3" class="data row7 col3" >303,448,709</td>
+      <td id="T_bd95c_row7_col4" class="data row7 col4" >1.9853%</td>
+      <td id="T_bd95c_row7_col5" class="data row7 col5" >-</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row8_col0" class="data row8 col0" >9</td>
+      <td id="T_bd95c_row8_col1" class="data row8 col1" >กองทุนรวม วายุภักษ์หนึ่ง</td>
+      <td id="T_bd95c_row8_col2" class="data row8 col2" >238,580,800</td>
+      <td id="T_bd95c_row8_col3" class="data row8 col3" >250,280,800</td>
+      <td id="T_bd95c_row8_col4" class="data row8 col4" >1.6374%</td>
+      <td id="T_bd95c_row8_col5" class="data row8 col5" >▲ 11,700,000</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row9_col0" class="data row9 col0" >10</td>
+      <td id="T_bd95c_row9_col1" class="data row9 col1" >SOUTH EAST ASIA UK (TYPE C) NOMINEES LIMITED</td>
+      <td id="T_bd95c_row9_col2" class="data row9 col2" >217,303,019</td>
+      <td id="T_bd95c_row9_col3" class="data row9 col3" >225,311,604</td>
+      <td id="T_bd95c_row9_col4" class="data row9 col4" >1.4741%</td>
+      <td id="T_bd95c_row9_col5" class="data row9 col5" >▲ 8,008,585</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row10_col0" class="data row10 col0" >11</td>
+      <td id="T_bd95c_row10_col1" class="data row10 col1" >บริษัท ช.การช่าง-โตกิว คอนสตรัคชั่น จำกัด</td>
+      <td id="T_bd95c_row10_col2" class="data row10 col2" >136,659,952</td>
+      <td id="T_bd95c_row10_col3" class="data row10 col3" >136,659,952</td>
+      <td id="T_bd95c_row10_col4" class="data row10 col4" >0.8941%</td>
+      <td id="T_bd95c_row10_col5" class="data row10 col5" >-</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row11_col0" class="data row11 col0" >12</td>
+      <td id="T_bd95c_row11_col1" class="data row11 col1" >บริษัท มหาศิริ สยาม จำกัด</td>
+      <td id="T_bd95c_row11_col2" class="data row11 col2" >99,761,189</td>
+      <td id="T_bd95c_row11_col3" class="data row11 col3" >97,254,389</td>
+      <td id="T_bd95c_row11_col4" class="data row11 col4" >0.6363%</td>
+      <td id="T_bd95c_row11_col5" class="data row11 col5" >▼ 2,506,800</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row12_col0" class="data row12 col0" >13</td>
+      <td id="T_bd95c_row12_col1" class="data row12 col1" >STATE STREET EUROPE LIMITED</td>
+      <td id="T_bd95c_row12_col2" class="data row12 col2" >91,576,450</td>
+      <td id="T_bd95c_row12_col3" class="data row12 col3" >89,529,421</td>
+      <td id="T_bd95c_row12_col4" class="data row12 col4" >0.5857%</td>
+      <td id="T_bd95c_row12_col5" class="data row12 col5" >▼ 2,047,029</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row13_col0" class="data row13 col0" >14</td>
+      <td id="T_bd95c_row13_col1" class="data row13 col1" >บริษัท ซินเท็ค คอนสตรัคชั่น จำกัด (มหาชน)</td>
+      <td id="T_bd95c_row13_col2" class="data row13 col2" >75,171,402</td>
+      <td id="T_bd95c_row13_col3" class="data row13 col3" >75,171,402</td>
+      <td id="T_bd95c_row13_col4" class="data row13 col4" >0.4918%</td>
+      <td id="T_bd95c_row13_col5" class="data row13 col5" >-</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row14_col0" class="data row14 col0" >15</td>
+      <td id="T_bd95c_row14_col1" class="data row14 col1" >นายปลิว ตรีวิศวเวทย์</td>
+      <td id="T_bd95c_row14_col2" class="data row14 col2" >35,901,399</td>
+      <td id="T_bd95c_row14_col3" class="data row14 col3" >74,667,999</td>
+      <td id="T_bd95c_row14_col4" class="data row14 col4" >0.4885%</td>
+      <td id="T_bd95c_row14_col5" class="data row14 col5" >▲ 38,766,600</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row15_col0" class="data row15 col0" >16</td>
+      <td id="T_bd95c_row15_col1" class="data row15 col1" >นายมิน เธียรวร</td>
+      <td id="T_bd95c_row15_col2" class="data row15 col2" >60,000,000</td>
+      <td id="T_bd95c_row15_col3" class="data row15 col3" >60,000,000</td>
+      <td id="T_bd95c_row15_col4" class="data row15 col4" >0.3925%</td>
+      <td id="T_bd95c_row15_col5" class="data row15 col5" >-</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row16_col0" class="data row16 col0" >17</td>
+      <td id="T_bd95c_row16_col1" class="data row16 col1" >นายสมบัติ พานิชชีวะ</td>
+      <td id="T_bd95c_row16_col2" class="data row16 col2" >57,440,106</td>
+      <td id="T_bd95c_row16_col3" class="data row16 col3" >57,440,106</td>
+      <td id="T_bd95c_row16_col4" class="data row16 col4" >0.3758%</td>
+      <td id="T_bd95c_row16_col5" class="data row16 col5" >-</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row17_col0" class="data row17 col0" >18</td>
+      <td id="T_bd95c_row17_col1" class="data row17 col1" >กองทุนเปิด บัวหลวงโครงสร้างพื้นฐานเพื่อการเลี้ยงชีพ</td>
+      <td id="T_bd95c_row17_col2" class="data row17 col2" >51,802,400</td>
+      <td id="T_bd95c_row17_col3" class="data row17 col3" >51,802,400</td>
+      <td id="T_bd95c_row17_col4" class="data row17 col4" >0.3389%</td>
+      <td id="T_bd95c_row17_col5" class="data row17 col5" >-</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row18_col0" class="data row18 col0" >19</td>
+      <td id="T_bd95c_row18_col1" class="data row18 col1" >บริษัท วิริยะประกันภัย จำกัด (มหาชน)</td>
+      <td id="T_bd95c_row18_col2" class="data row18 col2" >50,938,162</td>
+      <td id="T_bd95c_row18_col3" class="data row18 col3" >50,938,162</td>
+      <td id="T_bd95c_row18_col4" class="data row18 col4" >0.3333%</td>
+      <td id="T_bd95c_row18_col5" class="data row18 col5" >-</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row19_col0" class="data row19 col0" >20</td>
+      <td id="T_bd95c_row19_col1" class="data row19 col1" >นายปริญญา เธียรวร</td>
+      <td id="T_bd95c_row19_col2" class="data row19 col2" >50,000,000</td>
+      <td id="T_bd95c_row19_col3" class="data row19 col3" >50,000,000</td>
+      <td id="T_bd95c_row19_col4" class="data row19 col4" >0.3271%</td>
+      <td id="T_bd95c_row19_col5" class="data row19 col5" >-</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row20_col0" class="data row20 col0" >21</td>
+      <td id="T_bd95c_row20_col1" class="data row20 col1" >นางอลิศา เธียรวร</td>
+      <td id="T_bd95c_row20_col2" class="data row20 col2" >50,000,000</td>
+      <td id="T_bd95c_row20_col3" class="data row20 col3" >50,000,000</td>
+      <td id="T_bd95c_row20_col4" class="data row20 col4" >0.3271%</td>
+      <td id="T_bd95c_row20_col5" class="data row20 col5" >-</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row21_col0" class="data row21 col0" >22</td>
+      <td id="T_bd95c_row21_col1" class="data row21 col1" >นางสุตราพร จิตรสกุล</td>
+      <td id="T_bd95c_row21_col2" class="data row21 col2" >45,606,892</td>
+      <td id="T_bd95c_row21_col3" class="data row21 col3" >45,606,892</td>
+      <td id="T_bd95c_row21_col4" class="data row21 col4" >0.2984%</td>
+      <td id="T_bd95c_row21_col5" class="data row21 col5" >-</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row22_col0" class="data row22 col0" >23</td>
+      <td id="T_bd95c_row22_col1" class="data row22 col1" >นายสุทิน พุฒิทานันท์</td>
+      <td id="T_bd95c_row22_col2" class="data row22 col2" >681,500</td>
+      <td id="T_bd95c_row22_col3" class="data row22 col3" >34,786,000</td>
+      <td id="T_bd95c_row22_col4" class="data row22 col4" >0.2276%</td>
+      <td id="T_bd95c_row22_col5" class="data row22 col5" >▲ 34,104,500</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row23_col0" class="data row23 col0" >24</td>
+      <td id="T_bd95c_row23_col1" class="data row23 col1" >นายประเสริฐ เสถียรถิระกุล</td>
+      <td id="T_bd95c_row23_col2" class="data row23 col2" >33,274,527</td>
+      <td id="T_bd95c_row23_col3" class="data row23 col3" >30,174,527</td>
+      <td id="T_bd95c_row23_col4" class="data row23 col4" >0.1974%</td>
+      <td id="T_bd95c_row23_col5" class="data row23 col5" >▼ 3,100,000</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row24_col0" class="data row24 col0" >25</td>
+      <td id="T_bd95c_row24_col1" class="data row24 col1" >นายวรพงศ์ อัศวนิเวศน์</td>
+      <td id="T_bd95c_row24_col2" class="data row24 col2" >27,400,000</td>
+      <td id="T_bd95c_row24_col3" class="data row24 col3" >27,400,000</td>
+      <td id="T_bd95c_row24_col4" class="data row24 col4" >0.1793%</td>
+      <td id="T_bd95c_row24_col5" class="data row24 col5" >-</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row25_col0" class="data row25 col0" >26</td>
+      <td id="T_bd95c_row25_col1" class="data row25 col1" >NORTRUST NOMINEES LIMITED-NTC-STATE TEACHERS RETIREMENT SYSTEM OF OHIO</td>
+      <td id="T_bd95c_row25_col2" class="data row25 col2" >23,449,059</td>
+      <td id="T_bd95c_row25_col3" class="data row25 col3" >22,910,149</td>
+      <td id="T_bd95c_row25_col4" class="data row25 col4" >0.1499%</td>
+      <td id="T_bd95c_row25_col5" class="data row25 col5" >▼ 538,910</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row26_col0" class="data row26 col0" >27</td>
+      <td id="T_bd95c_row26_col1" class="data row26 col1" >บริษัทหลักทรัพย์ เกียรตินาคินภัทร จำกัด (มหาชน)</td>
+      <td id="T_bd95c_row26_col2" class="data row26 col2" >10,900,200</td>
+      <td id="T_bd95c_row26_col3" class="data row26 col3" >20,977,400</td>
+      <td id="T_bd95c_row26_col4" class="data row26 col4" >0.1372%</td>
+      <td id="T_bd95c_row26_col5" class="data row26 col5" >▲ 10,077,200</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row27_col0" class="data row27 col0" >28</td>
+      <td id="T_bd95c_row27_col1" class="data row27 col1" >กองทุนเปิด บัวหลวงทศพลไทยเพื่อความยั่งยืน</td>
+      <td id="T_bd95c_row27_col2" class="data row27 col2" >-</td>
+      <td id="T_bd95c_row27_col3" class="data row27 col3" >20,000,000</td>
+      <td id="T_bd95c_row27_col4" class="data row27 col4" >0.1308%</td>
+      <td id="T_bd95c_row27_col5" class="data row27 col5" >▲ 20,000,000</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row28_col0" class="data row28 col0" >29</td>
+      <td id="T_bd95c_row28_col1" class="data row28 col1" >กองทุนเปิด บัวหลวงเฟล็กซิเบิ้ลเพื่อการเลี้ยงชีพ</td>
+      <td id="T_bd95c_row28_col2" class="data row28 col2" >19,687,500</td>
+      <td id="T_bd95c_row28_col3" class="data row28 col3" >19,687,500</td>
+      <td id="T_bd95c_row28_col4" class="data row28 col4" >0.1288%</td>
+      <td id="T_bd95c_row28_col5" class="data row28 col5" >-</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row29_col0" class="data row29 col0" >30</td>
+      <td id="T_bd95c_row29_col1" class="data row29 col1" >นายสมชาย สิทธินานนท์พร</td>
+      <td id="T_bd95c_row29_col2" class="data row29 col2" >19,300,000</td>
+      <td id="T_bd95c_row29_col3" class="data row29 col3" >19,300,000</td>
+      <td id="T_bd95c_row29_col4" class="data row29 col4" >0.1263%</td>
+      <td id="T_bd95c_row29_col5" class="data row29 col5" >-</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row30_col0" class="data row30 col0" >31</td>
+      <td id="T_bd95c_row30_col1" class="data row30 col1" >บริษัท ช.การช่าง โฮลดิ้ง จำกัด</td>
+      <td id="T_bd95c_row30_col2" class="data row30 col2" >32,701,800</td>
+      <td id="T_bd95c_row30_col3" class="data row30 col3" >19,101,800</td>
+      <td id="T_bd95c_row30_col4" class="data row30 col4" >0.1250%</td>
+      <td id="T_bd95c_row30_col5" class="data row30 col5" >▼ 13,600,000</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row31_col0" class="data row31 col0" >32</td>
+      <td id="T_bd95c_row31_col1" class="data row31 col1" >กองทุนเปิด เอไอเอ เอ็นแฮนซ์ เซท 50</td>
+      <td id="T_bd95c_row31_col2" class="data row31 col2" >-</td>
+      <td id="T_bd95c_row31_col3" class="data row31 col3" >19,046,900</td>
+      <td id="T_bd95c_row31_col4" class="data row31 col4" >0.1246%</td>
+      <td id="T_bd95c_row31_col5" class="data row31 col5" >▲ 19,046,900</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row32_col0" class="data row32 col0" >33</td>
+      <td id="T_bd95c_row32_col1" class="data row32 col1" >นายพีรพันธ์ ตันติสุวณิชย์กุล</td>
+      <td id="T_bd95c_row32_col2" class="data row32 col2" >18,047,005</td>
+      <td id="T_bd95c_row32_col3" class="data row32 col3" >18,047,005</td>
+      <td id="T_bd95c_row32_col4" class="data row32 col4" >0.1181%</td>
+      <td id="T_bd95c_row32_col5" class="data row32 col5" >-</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row33_col0" class="data row33 col0" >34</td>
+      <td id="T_bd95c_row33_col1" class="data row33 col1" >นายธีรธร คูหารุ่งโรจน์</td>
+      <td id="T_bd95c_row33_col2" class="data row33 col2" >15,717,686</td>
+      <td id="T_bd95c_row33_col3" class="data row33 col3" >15,717,686</td>
+      <td id="T_bd95c_row33_col4" class="data row33 col4" >0.1028%</td>
+      <td id="T_bd95c_row33_col5" class="data row33 col5" >-</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row34_col0" class="data row34 col0" >35</td>
+      <td id="T_bd95c_row34_col1" class="data row34 col1" >บริษัท ไทยประกันชีวิต จำกัด (มหาชน)</td>
+      <td id="T_bd95c_row34_col2" class="data row34 col2" >17,011,900</td>
+      <td id="T_bd95c_row34_col3" class="data row34 col3" >15,711,900</td>
+      <td id="T_bd95c_row34_col4" class="data row34 col4" >0.1028%</td>
+      <td id="T_bd95c_row34_col5" class="data row34 col5" >▼ 1,300,000</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row35_col0" class="data row35 col0" >36</td>
+      <td id="T_bd95c_row35_col1" class="data row35 col1" >กองทุนเปิด ยูไนเต็ด หุ้นไทย บรรษัทภิบาล</td>
+      <td id="T_bd95c_row35_col2" class="data row35 col2" >9,999,700</td>
+      <td id="T_bd95c_row35_col3" class="data row35 col3" >15,701,500</td>
+      <td id="T_bd95c_row35_col4" class="data row35 col4" >0.1027%</td>
+      <td id="T_bd95c_row35_col5" class="data row35 col5" >▲ 5,701,800</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row36_col0" class="data row36 col0" >37</td>
+      <td id="T_bd95c_row36_col1" class="data row36 col1" >BNY MELLON NOMINEES LIMITED</td>
+      <td id="T_bd95c_row36_col2" class="data row36 col2" >14,522,628</td>
+      <td id="T_bd95c_row36_col3" class="data row36 col3" >15,361,228</td>
+      <td id="T_bd95c_row36_col4" class="data row36 col4" >0.1005%</td>
+      <td id="T_bd95c_row36_col5" class="data row36 col5" >▲ 838,600</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row37_col0" class="data row37 col0" >38</td>
+      <td id="T_bd95c_row37_col1" class="data row37 col1" >นางปิยะภรณ์ เศรษฐโอฬาร</td>
+      <td id="T_bd95c_row37_col2" class="data row37 col2" >42,964,700</td>
+      <td id="T_bd95c_row37_col3" class="data row37 col3" >15,275,200</td>
+      <td id="T_bd95c_row37_col4" class="data row37 col4" >0.0999%</td>
+      <td id="T_bd95c_row37_col5" class="data row37 col5" >▼ 27,689,500</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row38_col0" class="data row38 col0" >39</td>
+      <td id="T_bd95c_row38_col1" class="data row38 col1" >กองทุนเปิด เอไอเอ ไทยอิควิตี้</td>
+      <td id="T_bd95c_row38_col2" class="data row38 col2" >-</td>
+      <td id="T_bd95c_row38_col3" class="data row38 col3" >15,212,500</td>
+      <td id="T_bd95c_row38_col4" class="data row38 col4" >0.0995%</td>
+      <td id="T_bd95c_row38_col5" class="data row38 col5" >▲ 15,212,500</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row39_col0" class="data row39 col0" >40</td>
+      <td id="T_bd95c_row39_col1" class="data row39 col1" >SE ASIA (TYPE B) NOMINEES LLC</td>
+      <td id="T_bd95c_row39_col2" class="data row39 col2" >14,746,551</td>
+      <td id="T_bd95c_row39_col3" class="data row39 col3" >15,145,551</td>
+      <td id="T_bd95c_row39_col4" class="data row39 col4" >0.0991%</td>
+      <td id="T_bd95c_row39_col5" class="data row39 col5" >▲ 399,000</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row40_col0" class="data row40 col0" >41</td>
+      <td id="T_bd95c_row40_col1" class="data row40 col1" >บริษัท อาคเนย์ประกันชีวิต จำกัด (มหาชน)</td>
+      <td id="T_bd95c_row40_col2" class="data row40 col2" >12,350,400</td>
+      <td id="T_bd95c_row40_col3" class="data row40 col3" >14,515,400</td>
+      <td id="T_bd95c_row40_col4" class="data row40 col4" >0.0950%</td>
+      <td id="T_bd95c_row40_col5" class="data row40 col5" >▲ 2,165,000</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row41_col0" class="data row41 col0" >42</td>
+      <td id="T_bd95c_row41_col1" class="data row41 col1" >พันเอก ดร.ยรรยง ภัทรเลาหะ</td>
+      <td id="T_bd95c_row41_col2" class="data row41 col2" >14,435,560</td>
+      <td id="T_bd95c_row41_col3" class="data row41 col3" >14,435,560</td>
+      <td id="T_bd95c_row41_col4" class="data row41 col4" >0.0944%</td>
+      <td id="T_bd95c_row41_col5" class="data row41 col5" >-</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row42_col0" class="data row42 col0" >43</td>
+      <td id="T_bd95c_row42_col1" class="data row42 col1" >นายชูเกียรติ ชนารัตน์</td>
+      <td id="T_bd95c_row42_col2" class="data row42 col2" >14,000,000</td>
+      <td id="T_bd95c_row42_col3" class="data row42 col3" >14,000,000</td>
+      <td id="T_bd95c_row42_col4" class="data row42 col4" >0.0916%</td>
+      <td id="T_bd95c_row42_col5" class="data row42 col5" >-</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row43_col0" class="data row43 col0" >44</td>
+      <td id="T_bd95c_row43_col1" class="data row43 col1" >กองมรดกนายวานิช ไชยวรรณ</td>
+      <td id="T_bd95c_row43_col2" class="data row43 col2" >13,942,386</td>
+      <td id="T_bd95c_row43_col3" class="data row43 col3" >13,942,386</td>
+      <td id="T_bd95c_row43_col4" class="data row43 col4" >0.0912%</td>
+      <td id="T_bd95c_row43_col5" class="data row43 col5" >-</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row44_col0" class="data row44 col0" >45</td>
+      <td id="T_bd95c_row44_col1" class="data row44 col1" >นายสุขสวัสดิ์ ศรีสุภรวาณิชย์</td>
+      <td id="T_bd95c_row44_col2" class="data row44 col2" >13,978,059</td>
+      <td id="T_bd95c_row44_col3" class="data row44 col3" >13,928,059</td>
+      <td id="T_bd95c_row44_col4" class="data row44 col4" >0.0911%</td>
+      <td id="T_bd95c_row44_col5" class="data row44 col5" >▼ 50,000</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row45_col0" class="data row45 col0" >46</td>
+      <td id="T_bd95c_row45_col1" class="data row45 col1" >กองทุนเปิด อีสท์สปริง SET50</td>
+      <td id="T_bd95c_row45_col2" class="data row45 col2" >14,346,000</td>
+      <td id="T_bd95c_row45_col3" class="data row45 col3" >13,884,700</td>
+      <td id="T_bd95c_row45_col4" class="data row45 col4" >0.0908%</td>
+      <td id="T_bd95c_row45_col5" class="data row45 col5" >▼ 461,300</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row46_col0" class="data row46 col0" >47</td>
+      <td id="T_bd95c_row46_col1" class="data row46 col1" >นายสามารถ จิรพัฒนกุล</td>
+      <td id="T_bd95c_row46_col2" class="data row46 col2" >13,362,000</td>
+      <td id="T_bd95c_row46_col3" class="data row46 col3" >13,362,000</td>
+      <td id="T_bd95c_row46_col4" class="data row46 col4" >0.0874%</td>
+      <td id="T_bd95c_row46_col5" class="data row46 col5" >-</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row47_col0" class="data row47 col0" >48</td>
+      <td id="T_bd95c_row47_col1" class="data row47 col1" >กองทุนเปิด ไทยพาณิชย์เซ็ท อินเด็กซ์ ฟันด์</td>
+      <td id="T_bd95c_row47_col2" class="data row47 col2" >12,717,896</td>
+      <td id="T_bd95c_row47_col3" class="data row47 col3" >12,908,396</td>
+      <td id="T_bd95c_row47_col4" class="data row47 col4" >0.0845%</td>
+      <td id="T_bd95c_row47_col5" class="data row47 col5" >▲ 190,500</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row48_col0" class="data row48 col0" >49</td>
+      <td id="T_bd95c_row48_col1" class="data row48 col1" >น.ส.อรนุช เมธาวิภาส</td>
+      <td id="T_bd95c_row48_col2" class="data row48 col2" >12,715,159</td>
+      <td id="T_bd95c_row48_col3" class="data row48 col3" >12,615,159</td>
+      <td id="T_bd95c_row48_col4" class="data row48 col4" >0.0825%</td>
+      <td id="T_bd95c_row48_col5" class="data row48 col5" >▼ 100,000</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row49_col0" class="data row49 col0" >50</td>
+      <td id="T_bd95c_row49_col1" class="data row49 col1" >นางกันตศิริ ภัทรเลาหะ</td>
+      <td id="T_bd95c_row49_col2" class="data row49 col2" >12,480,200</td>
+      <td id="T_bd95c_row49_col3" class="data row49 col3" >12,480,200</td>
+      <td id="T_bd95c_row49_col4" class="data row49 col4" >0.0816%</td>
+      <td id="T_bd95c_row49_col5" class="data row49 col5" >-</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row50_col0" class="data row50 col0" >51</td>
+      <td id="T_bd95c_row50_col1" class="data row50 col1" >นางวลัยพร สมภักดี</td>
+      <td id="T_bd95c_row50_col2" class="data row50 col2" >12,449,869</td>
+      <td id="T_bd95c_row50_col3" class="data row50 col3" >12,449,869</td>
+      <td id="T_bd95c_row50_col4" class="data row50 col4" >0.0815%</td>
+      <td id="T_bd95c_row50_col5" class="data row50 col5" >-</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row51_col0" class="data row51 col0" >52</td>
+      <td id="T_bd95c_row51_col1" class="data row51 col1" >นายวรวิทย์ โรจน์รพีธาดา</td>
+      <td id="T_bd95c_row51_col2" class="data row51 col2" >12,230,000</td>
+      <td id="T_bd95c_row51_col3" class="data row51 col3" >12,230,000</td>
+      <td id="T_bd95c_row51_col4" class="data row51 col4" >0.0800%</td>
+      <td id="T_bd95c_row51_col5" class="data row51 col5" >-</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row52_col0" class="data row52 col0" >53</td>
+      <td id="T_bd95c_row52_col1" class="data row52 col1" >N.C.B.TRUST LIMITED-NORGES BANK 1</td>
+      <td id="T_bd95c_row52_col2" class="data row52 col2" >4,581,815</td>
+      <td id="T_bd95c_row52_col3" class="data row52 col3" >12,220,615</td>
+      <td id="T_bd95c_row52_col4" class="data row52 col4" >0.0800%</td>
+      <td id="T_bd95c_row52_col5" class="data row52 col5" >▲ 7,638,800</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row53_col0" class="data row53 col0" >54</td>
+      <td id="T_bd95c_row53_col1" class="data row53 col1" >BBHISL NOMINEES LIMITED</td>
+      <td id="T_bd95c_row53_col2" class="data row53 col2" >12,100,577</td>
+      <td id="T_bd95c_row53_col3" class="data row53 col3" >12,177,177</td>
+      <td id="T_bd95c_row53_col4" class="data row53 col4" >0.0797%</td>
+      <td id="T_bd95c_row53_col5" class="data row53 col5" >▲ 76,600</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row54_col0" class="data row54 col0" >55</td>
+      <td id="T_bd95c_row54_col1" class="data row54 col1" >นายสมคิด ศรีกฤษณพล</td>
+      <td id="T_bd95c_row54_col2" class="data row54 col2" >12,094,548</td>
+      <td id="T_bd95c_row54_col3" class="data row54 col3" >12,094,548</td>
+      <td id="T_bd95c_row54_col4" class="data row54 col4" >0.0791%</td>
+      <td id="T_bd95c_row54_col5" class="data row54 col5" >-</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row55_col0" class="data row55 col0" >56</td>
+      <td id="T_bd95c_row55_col1" class="data row55 col1" >SOUTH EAST ASIA UK (TYPE A) NOMINEES LIMITED</td>
+      <td id="T_bd95c_row55_col2" class="data row55 col2" >11,967,394</td>
+      <td id="T_bd95c_row55_col3" class="data row55 col3" >11,746,241</td>
+      <td id="T_bd95c_row55_col4" class="data row55 col4" >0.0768%</td>
+      <td id="T_bd95c_row55_col5" class="data row55 col5" >▼ 221,153</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row56_col0" class="data row56 col0" >57</td>
+      <td id="T_bd95c_row56_col1" class="data row56 col1" >กองทุนเปิด บัวหลวงโครงสร้างพื้นฐาน</td>
+      <td id="T_bd95c_row56_col2" class="data row56 col2" >11,278,300</td>
+      <td id="T_bd95c_row56_col3" class="data row56 col3" >11,278,300</td>
+      <td id="T_bd95c_row56_col4" class="data row56 col4" >0.0738%</td>
+      <td id="T_bd95c_row56_col5" class="data row56 col5" >-</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row57_col0" class="data row57 col0" >58</td>
+      <td id="T_bd95c_row57_col1" class="data row57 col1" >นายทวีศักดิ์ วีระประเสริฐ</td>
+      <td id="T_bd95c_row57_col2" class="data row57 col2" >9,900,000</td>
+      <td id="T_bd95c_row57_col3" class="data row57 col3" >10,900,000</td>
+      <td id="T_bd95c_row57_col4" class="data row57 col4" >0.0713%</td>
+      <td id="T_bd95c_row57_col5" class="data row57 col5" >▲ 1,000,000</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row58_col0" class="data row58 col0" >59</td>
+      <td id="T_bd95c_row58_col1" class="data row58 col1" >นายนพพล วชิรพงศ์</td>
+      <td id="T_bd95c_row58_col2" class="data row58 col2" >10,671,622</td>
+      <td id="T_bd95c_row58_col3" class="data row58 col3" >10,671,622</td>
+      <td id="T_bd95c_row58_col4" class="data row58 col4" >0.0698%</td>
+      <td id="T_bd95c_row58_col5" class="data row58 col5" >-</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row59_col0" class="data row59 col0" >60</td>
+      <td id="T_bd95c_row59_col1" class="data row59 col1" >NORTRUST NOMINEES LIMITED-NTC-UKUC UCITS NON LENDING 10PCT NON TREATY CLIENTS ACCOUNT</td>
+      <td id="T_bd95c_row59_col2" class="data row59 col2" >10,228,627</td>
+      <td id="T_bd95c_row59_col3" class="data row59 col3" >10,228,627</td>
+      <td id="T_bd95c_row59_col4" class="data row59 col4" >0.0669%</td>
+      <td id="T_bd95c_row59_col5" class="data row59 col5" >-</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row60_col0" class="data row60 col0" >61</td>
+      <td id="T_bd95c_row60_col1" class="data row60 col1" >กองทุนเปิด บัวหลวงตราสารทุนเพื่อการเลี้ยงชีพ</td>
+      <td id="T_bd95c_row60_col2" class="data row60 col2" >-</td>
+      <td id="T_bd95c_row60_col3" class="data row60 col3" >10,123,700</td>
+      <td id="T_bd95c_row60_col4" class="data row60 col4" >0.0662%</td>
+      <td id="T_bd95c_row60_col5" class="data row60 col5" >▲ 10,123,700</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row61_col0" class="data row61 col0" >62</td>
+      <td id="T_bd95c_row61_col1" class="data row61 col1" >น.ส.นพพร ชาญณรงค์</td>
+      <td id="T_bd95c_row61_col2" class="data row61 col2" >10,112,731</td>
+      <td id="T_bd95c_row61_col3" class="data row61 col3" >10,112,731</td>
+      <td id="T_bd95c_row61_col4" class="data row61 col4" >0.0662%</td>
+      <td id="T_bd95c_row61_col5" class="data row61 col5" >-</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row62_col0" class="data row62 col0" >63</td>
+      <td id="T_bd95c_row62_col1" class="data row62 col1" >ท่านผู้หญิงวิระยา ชวกุล</td>
+      <td id="T_bd95c_row62_col2" class="data row62 col2" >10,100,000</td>
+      <td id="T_bd95c_row62_col3" class="data row62 col3" >10,100,000</td>
+      <td id="T_bd95c_row62_col4" class="data row62 col4" >0.0661%</td>
+      <td id="T_bd95c_row62_col5" class="data row62 col5" >-</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row63_col0" class="data row63 col0" >64</td>
+      <td id="T_bd95c_row63_col1" class="data row63 col1" >นายชาญชัย พาณิชยารมณ์</td>
+      <td id="T_bd95c_row63_col2" class="data row63 col2" >10,000,000</td>
+      <td id="T_bd95c_row63_col3" class="data row63 col3" >10,000,000</td>
+      <td id="T_bd95c_row63_col4" class="data row63 col4" >0.0654%</td>
+      <td id="T_bd95c_row63_col5" class="data row63 col5" >-</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row64_col0" class="data row64 col0" >65</td>
+      <td id="T_bd95c_row64_col1" class="data row64 col1" >นายชนินทร์ ชลิศราพงศ์</td>
+      <td id="T_bd95c_row64_col2" class="data row64 col2" >19,750,000</td>
+      <td id="T_bd95c_row64_col3" class="data row64 col3" >9,750,000</td>
+      <td id="T_bd95c_row64_col4" class="data row64 col4" >0.0638%</td>
+      <td id="T_bd95c_row64_col5" class="data row64 col5" >▼ 10,000,000</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row65_col0" class="data row65 col0" >66</td>
+      <td id="T_bd95c_row65_col1" class="data row65 col1" >นายกรวิทย์ สุพุทธิพงศ์</td>
+      <td id="T_bd95c_row65_col2" class="data row65 col2" >9,667,204</td>
+      <td id="T_bd95c_row65_col3" class="data row65 col3" >9,667,204</td>
+      <td id="T_bd95c_row65_col4" class="data row65 col4" >0.0632%</td>
+      <td id="T_bd95c_row65_col5" class="data row65 col5" >-</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row66_col0" class="data row66 col0" >67</td>
+      <td id="T_bd95c_row66_col1" class="data row66 col1" >บริษัท เมืองไทยประกันชีวิต จำกัด (มหาชน)</td>
+      <td id="T_bd95c_row66_col2" class="data row66 col2" >10,027,707</td>
+      <td id="T_bd95c_row66_col3" class="data row66 col3" >9,584,607</td>
+      <td id="T_bd95c_row66_col4" class="data row66 col4" >0.0627%</td>
+      <td id="T_bd95c_row66_col5" class="data row66 col5" >▼ 443,100</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row67_col0" class="data row67 col0" >68</td>
+      <td id="T_bd95c_row67_col1" class="data row67 col1" >นายไชยวัฒน์ ศิวสิริการุณย์</td>
+      <td id="T_bd95c_row67_col2" class="data row67 col2" >9,500,000</td>
+      <td id="T_bd95c_row67_col3" class="data row67 col3" >9,500,000</td>
+      <td id="T_bd95c_row67_col4" class="data row67 col4" >0.0622%</td>
+      <td id="T_bd95c_row67_col5" class="data row67 col5" >-</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row68_col0" class="data row68 col0" >69</td>
+      <td id="T_bd95c_row68_col1" class="data row68 col1" >นายศรายุทธ โรหิตเสถียร</td>
+      <td id="T_bd95c_row68_col2" class="data row68 col2" >9,000,000</td>
+      <td id="T_bd95c_row68_col3" class="data row68 col3" >9,000,000</td>
+      <td id="T_bd95c_row68_col4" class="data row68 col4" >0.0589%</td>
+      <td id="T_bd95c_row68_col5" class="data row68 col5" >-</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row69_col0" class="data row69 col0" >70</td>
+      <td id="T_bd95c_row69_col1" class="data row69 col1" >นางสุนทรี ลี้โกมลชัย</td>
+      <td id="T_bd95c_row69_col2" class="data row69 col2" >8,850,000</td>
+      <td id="T_bd95c_row69_col3" class="data row69 col3" >8,900,000</td>
+      <td id="T_bd95c_row69_col4" class="data row69 col4" >0.0582%</td>
+      <td id="T_bd95c_row69_col5" class="data row69 col5" >▲ 50,000</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row70_col0" class="data row70 col0" >71</td>
+      <td id="T_bd95c_row70_col1" class="data row70 col1" >น.ส.สุจิตรา บวรผดุงกิตติ</td>
+      <td id="T_bd95c_row70_col2" class="data row70 col2" >8,830,611</td>
+      <td id="T_bd95c_row70_col3" class="data row70 col3" >8,830,611</td>
+      <td id="T_bd95c_row70_col4" class="data row70 col4" >0.0578%</td>
+      <td id="T_bd95c_row70_col5" class="data row70 col5" >-</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row71_col0" class="data row71 col0" >72</td>
+      <td id="T_bd95c_row71_col1" class="data row71 col1" >นายสินธุ วงศ์ปิยะบวร</td>
+      <td id="T_bd95c_row71_col2" class="data row71 col2" >8,830,611</td>
+      <td id="T_bd95c_row71_col3" class="data row71 col3" >8,830,611</td>
+      <td id="T_bd95c_row71_col4" class="data row71 col4" >0.0578%</td>
+      <td id="T_bd95c_row71_col5" class="data row71 col5" >-</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row72_col0" class="data row72 col0" >73</td>
+      <td id="T_bd95c_row72_col1" class="data row72 col1" >กองทุนเปิด ยูไนเต็ด หุ้นไทย แอคทีฟ ฟันด์</td>
+      <td id="T_bd95c_row72_col2" class="data row72 col2" >6,402,100</td>
+      <td id="T_bd95c_row72_col3" class="data row72 col3" >8,596,700</td>
+      <td id="T_bd95c_row72_col4" class="data row72 col4" >0.0562%</td>
+      <td id="T_bd95c_row72_col5" class="data row72 col5" >▲ 2,194,600</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row73_col0" class="data row73 col0" >74</td>
+      <td id="T_bd95c_row73_col1" class="data row73 col1" >นายอัครพงษ์ โชติค้ำวงศ์</td>
+      <td id="T_bd95c_row73_col2" class="data row73 col2" >8,458,913</td>
+      <td id="T_bd95c_row73_col3" class="data row73 col3" >8,478,913</td>
+      <td id="T_bd95c_row73_col4" class="data row73 col4" >0.0555%</td>
+      <td id="T_bd95c_row73_col5" class="data row73 col5" >▲ 20,000</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row74_col0" class="data row74 col0" >75</td>
+      <td id="T_bd95c_row74_col1" class="data row74 col1" >นายทิวา จิรพัฒนกุล</td>
+      <td id="T_bd95c_row74_col2" class="data row74 col2" >8,468,000</td>
+      <td id="T_bd95c_row74_col3" class="data row74 col3" >8,468,000</td>
+      <td id="T_bd95c_row74_col4" class="data row74 col4" >0.0554%</td>
+      <td id="T_bd95c_row74_col5" class="data row74 col5" >-</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row75_col0" class="data row75 col0" >76</td>
+      <td id="T_bd95c_row75_col1" class="data row75 col1" >บริษัท กรุงเทพประกันภัย จำกัด (มหาชน)</td>
+      <td id="T_bd95c_row75_col2" class="data row75 col2" >8,394,969</td>
+      <td id="T_bd95c_row75_col3" class="data row75 col3" >8,394,969</td>
+      <td id="T_bd95c_row75_col4" class="data row75 col4" >0.0549%</td>
+      <td id="T_bd95c_row75_col5" class="data row75 col5" >-</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row76_col0" class="data row76 col0" >77</td>
+      <td id="T_bd95c_row76_col1" class="data row76 col1" >นายอมร ทองธิว</td>
+      <td id="T_bd95c_row76_col2" class="data row76 col2" >7,737,200</td>
+      <td id="T_bd95c_row76_col3" class="data row76 col3" >8,168,872</td>
+      <td id="T_bd95c_row76_col4" class="data row76 col4" >0.0534%</td>
+      <td id="T_bd95c_row76_col5" class="data row76 col5" >▲ 431,672</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row77_col0" class="data row77 col0" >78</td>
+      <td id="T_bd95c_row77_col1" class="data row77 col1" >นายภาคภูมิ สงวนเลิศฤทัย</td>
+      <td id="T_bd95c_row77_col2" class="data row77 col2" >11,000,000</td>
+      <td id="T_bd95c_row77_col3" class="data row77 col3" >8,000,000</td>
+      <td id="T_bd95c_row77_col4" class="data row77 col4" >0.0523%</td>
+      <td id="T_bd95c_row77_col5" class="data row77 col5" >▼ 3,000,000</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row78_col0" class="data row78 col0" >79</td>
+      <td id="T_bd95c_row78_col1" class="data row78 col1" >นายพิสิษฐ์ วนิชย์ถนอม</td>
+      <td id="T_bd95c_row78_col2" class="data row78 col2" >8,000,000</td>
+      <td id="T_bd95c_row78_col3" class="data row78 col3" >8,000,000</td>
+      <td id="T_bd95c_row78_col4" class="data row78 col4" >0.0523%</td>
+      <td id="T_bd95c_row78_col5" class="data row78 col5" >-</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row79_col0" class="data row79 col0" >80</td>
+      <td id="T_bd95c_row79_col1" class="data row79 col1" >นายณัฐวรรธน์ เตชะไพบูลย์</td>
+      <td id="T_bd95c_row79_col2" class="data row79 col2" >7,826,400</td>
+      <td id="T_bd95c_row79_col3" class="data row79 col3" >7,826,400</td>
+      <td id="T_bd95c_row79_col4" class="data row79 col4" >0.0512%</td>
+      <td id="T_bd95c_row79_col5" class="data row79 col5" >-</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row80_col0" class="data row80 col0" >81</td>
+      <td id="T_bd95c_row80_col1" class="data row80 col1" >กองทุนสำรองเลี้ยงชีพ พนักงาน ธนาคารเพื่อการเกษตรและสหกรณ์การเกษตร ซึ่งจดทะเบียนแล้ว</td>
+      <td id="T_bd95c_row80_col2" class="data row80 col2" >2,440,200</td>
+      <td id="T_bd95c_row80_col3" class="data row80 col3" >7,773,100</td>
+      <td id="T_bd95c_row80_col4" class="data row80 col4" >0.0509%</td>
+      <td id="T_bd95c_row80_col5" class="data row80 col5" >▲ 5,332,900</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row81_col0" class="data row81 col0" >82</td>
+      <td id="T_bd95c_row81_col1" class="data row81 col1" >นายณรงค์ ภัทรเลาหะ</td>
+      <td id="T_bd95c_row81_col2" class="data row81 col2" >7,588,942</td>
+      <td id="T_bd95c_row81_col3" class="data row81 col3" >7,588,942</td>
+      <td id="T_bd95c_row81_col4" class="data row81 col4" >0.0496%</td>
+      <td id="T_bd95c_row81_col5" class="data row81 col5" >-</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row82_col0" class="data row82 col0" >83</td>
+      <td id="T_bd95c_row82_col1" class="data row82 col1" >กองทุนเปิด เค เซ็ท 50</td>
+      <td id="T_bd95c_row82_col2" class="data row82 col2" >7,760,600</td>
+      <td id="T_bd95c_row82_col3" class="data row82 col3" >7,577,700</td>
+      <td id="T_bd95c_row82_col4" class="data row82 col4" >0.0496%</td>
+      <td id="T_bd95c_row82_col5" class="data row82 col5" >▼ 182,900</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row83_col0" class="data row83 col0" >84</td>
+      <td id="T_bd95c_row83_col1" class="data row83 col1" >PRUDENTIAL LIFE ASSURANCE (THAILAND) PUBLIC COMPANY LIMITED</td>
+      <td id="T_bd95c_row83_col2" class="data row83 col2" >7,519,800</td>
+      <td id="T_bd95c_row83_col3" class="data row83 col3" >7,519,800</td>
+      <td id="T_bd95c_row83_col4" class="data row83 col4" >0.0492%</td>
+      <td id="T_bd95c_row83_col5" class="data row83 col5" >-</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row84_col0" class="data row84 col0" >85</td>
+      <td id="T_bd95c_row84_col1" class="data row84 col1" >HSBC BANK PLC - PUTM ACS ESG EMERGING MARKET EQUITY FUND</td>
+      <td id="T_bd95c_row84_col2" class="data row84 col2" >6,946,400</td>
+      <td id="T_bd95c_row84_col3" class="data row84 col3" >7,258,700</td>
+      <td id="T_bd95c_row84_col4" class="data row84 col4" >0.0475%</td>
+      <td id="T_bd95c_row84_col5" class="data row84 col5" >▲ 312,300</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row85_col0" class="data row85 col0" >86</td>
+      <td id="T_bd95c_row85_col1" class="data row85 col1" >SKANDINAVISKA ENSKILDA BANKEN AB</td>
+      <td id="T_bd95c_row85_col2" class="data row85 col2" >7,200,000</td>
+      <td id="T_bd95c_row85_col3" class="data row85 col3" >7,200,000</td>
+      <td id="T_bd95c_row85_col4" class="data row85 col4" >0.0471%</td>
+      <td id="T_bd95c_row85_col5" class="data row85 col5" >-</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row86_col0" class="data row86 col0" >87</td>
+      <td id="T_bd95c_row86_col1" class="data row86 col1" >นางอารีวรรณ สืบสงวน</td>
+      <td id="T_bd95c_row86_col2" class="data row86 col2" >7,097,410</td>
+      <td id="T_bd95c_row86_col3" class="data row86 col3" >7,097,410</td>
+      <td id="T_bd95c_row86_col4" class="data row86 col4" >0.0464%</td>
+      <td id="T_bd95c_row86_col5" class="data row86 col5" >-</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row87_col0" class="data row87 col0" >88</td>
+      <td id="T_bd95c_row87_col1" class="data row87 col1" >นายกิตติ ภัทรเลาหะ</td>
+      <td id="T_bd95c_row87_col2" class="data row87 col2" >7,053,961</td>
+      <td id="T_bd95c_row87_col3" class="data row87 col3" >7,053,961</td>
+      <td id="T_bd95c_row87_col4" class="data row87 col4" >0.0461%</td>
+      <td id="T_bd95c_row87_col5" class="data row87 col5" >-</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row88_col0" class="data row88 col0" >89</td>
+      <td id="T_bd95c_row88_col1" class="data row88 col1" >นายพีระ ปัทมวรกุลชัย</td>
+      <td id="T_bd95c_row88_col2" class="data row88 col2" >7,006,215</td>
+      <td id="T_bd95c_row88_col3" class="data row88 col3" >7,006,215</td>
+      <td id="T_bd95c_row88_col4" class="data row88 col4" >0.0458%</td>
+      <td id="T_bd95c_row88_col5" class="data row88 col5" >-</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row89_col0" class="data row89 col0" >90</td>
+      <td id="T_bd95c_row89_col1" class="data row89 col1" >นายอานันท์ ปันยารชุน</td>
+      <td id="T_bd95c_row89_col2" class="data row89 col2" >7,000,000</td>
+      <td id="T_bd95c_row89_col3" class="data row89 col3" >7,000,000</td>
+      <td id="T_bd95c_row89_col4" class="data row89 col4" >0.0458%</td>
+      <td id="T_bd95c_row89_col5" class="data row89 col5" >-</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row90_col0" class="data row90 col0" >91</td>
+      <td id="T_bd95c_row90_col1" class="data row90 col1" >นายวิทยา หลิวจันทร์พัฒนา</td>
+      <td id="T_bd95c_row90_col2" class="data row90 col2" >6,910,217</td>
+      <td id="T_bd95c_row90_col3" class="data row90 col3" >6,910,217</td>
+      <td id="T_bd95c_row90_col4" class="data row90 col4" >0.0452%</td>
+      <td id="T_bd95c_row90_col5" class="data row90 col5" >-</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row91_col0" class="data row91 col0" >92</td>
+      <td id="T_bd95c_row91_col1" class="data row91 col1" >บริษัทหลักทรัพย์ เคจีไอ (ประเทศไทย) จำกัด (มหาชน)</td>
+      <td id="T_bd95c_row91_col2" class="data row91 col2" >13,229,500</td>
+      <td id="T_bd95c_row91_col3" class="data row91 col3" >6,896,900</td>
+      <td id="T_bd95c_row91_col4" class="data row91 col4" >0.0451%</td>
+      <td id="T_bd95c_row91_col5" class="data row91 col5" >▼ 6,332,600</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row92_col0" class="data row92 col0" >93</td>
+      <td id="T_bd95c_row92_col1" class="data row92 col1" >J.P. MORGAN (SUISSE) SA</td>
+      <td id="T_bd95c_row92_col2" class="data row92 col2" >10,351,562</td>
+      <td id="T_bd95c_row92_col3" class="data row92 col3" >6,811,062</td>
+      <td id="T_bd95c_row92_col4" class="data row92 col4" >0.0446%</td>
+      <td id="T_bd95c_row92_col5" class="data row92 col5" >▼ 3,540,500</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row93_col0" class="data row93 col0" >94</td>
+      <td id="T_bd95c_row93_col1" class="data row93 col1" >กองทุนเปิด บรรษัทภิบาล เพื่อการเลี้ยงชีพ</td>
+      <td id="T_bd95c_row93_col2" class="data row93 col2" >3,996,300</td>
+      <td id="T_bd95c_row93_col3" class="data row93 col3" >6,724,900</td>
+      <td id="T_bd95c_row93_col4" class="data row93 col4" >0.0440%</td>
+      <td id="T_bd95c_row93_col5" class="data row93 col5" >▲ 2,728,600</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row94_col0" class="data row94 col0" >95</td>
+      <td id="T_bd95c_row94_col1" class="data row94 col1" >กองทุนเปิด ไทยพาณิชย์ SET50 INDEX</td>
+      <td id="T_bd95c_row94_col2" class="data row94 col2" >6,586,400</td>
+      <td id="T_bd95c_row94_col3" class="data row94 col3" >6,354,800</td>
+      <td id="T_bd95c_row94_col4" class="data row94 col4" >0.0416%</td>
+      <td id="T_bd95c_row94_col5" class="data row94 col5" >▼ 231,600</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row95_col0" class="data row95 col0" >96</td>
+      <td id="T_bd95c_row95_col1" class="data row95 col1" >กองทุนเปิด เค TARGET NET ZERO หุ้นไทย</td>
+      <td id="T_bd95c_row95_col2" class="data row95 col2" >6,232,200</td>
+      <td id="T_bd95c_row95_col3" class="data row95 col3" >6,347,000</td>
+      <td id="T_bd95c_row95_col4" class="data row95 col4" >0.0415%</td>
+      <td id="T_bd95c_row95_col5" class="data row95 col5" >▲ 114,800</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row96_col0" class="data row96 col0" >97</td>
+      <td id="T_bd95c_row96_col1" class="data row96 col1" >นายสนิท ดุษฎีโหนด</td>
+      <td id="T_bd95c_row96_col2" class="data row96 col2" >6,333,000</td>
+      <td id="T_bd95c_row96_col3" class="data row96 col3" >6,333,000</td>
+      <td id="T_bd95c_row96_col4" class="data row96 col4" >0.0414%</td>
+      <td id="T_bd95c_row96_col5" class="data row96 col5" >-</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row97_col0" class="data row97 col0" >98</td>
+      <td id="T_bd95c_row97_col1" class="data row97 col1" >นางพิณตการณ์ อินชายเขา</td>
+      <td id="T_bd95c_row97_col2" class="data row97 col2" >6,307,579</td>
+      <td id="T_bd95c_row97_col3" class="data row97 col3" >6,307,579</td>
+      <td id="T_bd95c_row97_col4" class="data row97 col4" >0.0413%</td>
+      <td id="T_bd95c_row97_col5" class="data row97 col5" >-</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row98_col0" class="data row98 col0" >99</td>
+      <td id="T_bd95c_row98_col1" class="data row98 col1" >น.ส.วิณฑิกา ภัทรเลาหะ</td>
+      <td id="T_bd95c_row98_col2" class="data row98 col2" >6,186,000</td>
+      <td id="T_bd95c_row98_col3" class="data row98 col3" >6,186,000</td>
+      <td id="T_bd95c_row98_col4" class="data row98 col4" >0.0405%</td>
+      <td id="T_bd95c_row98_col5" class="data row98 col5" >-</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row99_col0" class="data row99 col0" >100</td>
+      <td id="T_bd95c_row99_col1" class="data row99 col1" >นายพงค์ศักดิ์ อุทยานสุขสันติ์</td>
+      <td id="T_bd95c_row99_col2" class="data row99 col2" >6,136,580</td>
+      <td id="T_bd95c_row99_col3" class="data row99 col3" >6,136,580</td>
+      <td id="T_bd95c_row99_col4" class="data row99 col4" >0.0401%</td>
+      <td id="T_bd95c_row99_col5" class="data row99 col5" >-</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row100_col0" class="data row100 col0" >101</td>
+      <td id="T_bd95c_row100_col1" class="data row100 col1" >กองทุนเปิด ยูไนเต็ด มิกซ์70/30ไทยเพื่อความยั่งยืนแบบพิเศษ</td>
+      <td id="T_bd95c_row100_col2" class="data row100 col2" >5,384,200</td>
+      <td id="T_bd95c_row100_col3" class="data row100 col3" >6,032,700</td>
+      <td id="T_bd95c_row100_col4" class="data row100 col4" >0.0395%</td>
+      <td id="T_bd95c_row100_col5" class="data row100 col5" >▲ 648,500</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row101_col0" class="data row101 col0" >102</td>
+      <td id="T_bd95c_row101_col1" class="data row101 col1" >นายสุพจน์ ทรัพย์ทวีชัยกุล</td>
+      <td id="T_bd95c_row101_col2" class="data row101 col2" >9,000,000</td>
+      <td id="T_bd95c_row101_col3" class="data row101 col3" >6,000,000</td>
+      <td id="T_bd95c_row101_col4" class="data row101 col4" >0.0393%</td>
+      <td id="T_bd95c_row101_col5" class="data row101 col5" >▼ 3,000,000</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row102_col0" class="data row102 col0" >103</td>
+      <td id="T_bd95c_row102_col1" class="data row102 col1" >นายมงคล ชาญไพบูลย์รัตน์</td>
+      <td id="T_bd95c_row102_col2" class="data row102 col2" >6,000,000</td>
+      <td id="T_bd95c_row102_col3" class="data row102 col3" >6,000,000</td>
+      <td id="T_bd95c_row102_col4" class="data row102 col4" >0.0393%</td>
+      <td id="T_bd95c_row102_col5" class="data row102 col5" >-</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row103_col0" class="data row103 col0" >104</td>
+      <td id="T_bd95c_row103_col1" class="data row103 col1" >นายกมล จึงเจริญดี</td>
+      <td id="T_bd95c_row103_col2" class="data row103 col2" >6,000,000</td>
+      <td id="T_bd95c_row103_col3" class="data row103 col3" >6,000,000</td>
+      <td id="T_bd95c_row103_col4" class="data row103 col4" >0.0393%</td>
+      <td id="T_bd95c_row103_col5" class="data row103 col5" >-</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row104_col0" class="data row104 col0" >105</td>
+      <td id="T_bd95c_row104_col1" class="data row104 col1" >THE HONGKONG AND SHANGHAI BANKING CORPORATION LIMITED, HONGKONG BRANCH</td>
+      <td id="T_bd95c_row104_col2" class="data row104 col2" >5,878,100</td>
+      <td id="T_bd95c_row104_col3" class="data row104 col3" >5,878,100</td>
+      <td id="T_bd95c_row104_col4" class="data row104 col4" >0.0385%</td>
+      <td id="T_bd95c_row104_col5" class="data row104 col5" >-</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row105_col0" class="data row105 col0" >106</td>
+      <td id="T_bd95c_row105_col1" class="data row105 col1" >น.ส.สริญญ์ จรัสยศวุฒิชัย</td>
+      <td id="T_bd95c_row105_col2" class="data row105 col2" >5,590,607</td>
+      <td id="T_bd95c_row105_col3" class="data row105 col3" >5,590,607</td>
+      <td id="T_bd95c_row105_col4" class="data row105 col4" >0.0366%</td>
+      <td id="T_bd95c_row105_col5" class="data row105 col5" >-</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row106_col0" class="data row106 col0" >107</td>
+      <td id="T_bd95c_row106_col1" class="data row106 col1" >น.ส.สิริญญ์ จรัสยศวุฒิชัย</td>
+      <td id="T_bd95c_row106_col2" class="data row106 col2" >5,590,500</td>
+      <td id="T_bd95c_row106_col3" class="data row106 col3" >5,590,500</td>
+      <td id="T_bd95c_row106_col4" class="data row106 col4" >0.0366%</td>
+      <td id="T_bd95c_row106_col5" class="data row106 col5" >-</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row107_col0" class="data row107 col0" >108</td>
+      <td id="T_bd95c_row107_col1" class="data row107 col1" >นายอุดมชัย พันธ์รัตนมงคล</td>
+      <td id="T_bd95c_row107_col2" class="data row107 col2" >5,500,000</td>
+      <td id="T_bd95c_row107_col3" class="data row107 col3" >5,500,000</td>
+      <td id="T_bd95c_row107_col4" class="data row107 col4" >0.0360%</td>
+      <td id="T_bd95c_row107_col5" class="data row107 col5" >-</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row108_col0" class="data row108 col0" >109</td>
+      <td id="T_bd95c_row108_col1" class="data row108 col1" >กองทุนสำรองเลี้ยงชีพ พนักงานบริษัท ปตท. จำกัด (มหาชน) และบริษัทร่วมทุน ซึ่งจดทะเบียนแล้ว</td>
+      <td id="T_bd95c_row108_col2" class="data row108 col2" >3,400,000</td>
+      <td id="T_bd95c_row108_col3" class="data row108 col3" >5,495,100</td>
+      <td id="T_bd95c_row108_col4" class="data row108 col4" >0.0360%</td>
+      <td id="T_bd95c_row108_col5" class="data row108 col5" >▲ 2,095,100</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row109_col0" class="data row109 col0" >110</td>
+      <td id="T_bd95c_row109_col1" class="data row109 col1" >กองทุนสำรองเลี้ยงชีพ พนักงานการไฟฟ้าส่วนภูมิภาค ซึ่งจดทะเบียนแล้ว</td>
+      <td id="T_bd95c_row109_col2" class="data row109 col2" >1,353,600</td>
+      <td id="T_bd95c_row109_col3" class="data row109 col3" >5,472,300</td>
+      <td id="T_bd95c_row109_col4" class="data row109 col4" >0.0358%</td>
+      <td id="T_bd95c_row109_col5" class="data row109 col5" >▲ 4,118,700</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row110_col0" class="data row110 col0" >111</td>
+      <td id="T_bd95c_row110_col1" class="data row110 col1" >GOVERNMENT PENSION FUND BY ONEAM</td>
+      <td id="T_bd95c_row110_col2" class="data row110 col2" >5,433,718</td>
+      <td id="T_bd95c_row110_col3" class="data row110 col3" >5,433,718</td>
+      <td id="T_bd95c_row110_col4" class="data row110 col4" >0.0355%</td>
+      <td id="T_bd95c_row110_col5" class="data row110 col5" >-</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row111_col0" class="data row111 col0" >112</td>
+      <td id="T_bd95c_row111_col1" class="data row111 col1" >นายชาญชัย จารุเมธี</td>
+      <td id="T_bd95c_row111_col2" class="data row111 col2" >5,023,000</td>
+      <td id="T_bd95c_row111_col3" class="data row111 col3" >5,200,000</td>
+      <td id="T_bd95c_row111_col4" class="data row111 col4" >0.0340%</td>
+      <td id="T_bd95c_row111_col5" class="data row111 col5" >▲ 177,000</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row112_col0" class="data row112 col0" >113</td>
+      <td id="T_bd95c_row112_col1" class="data row112 col1" >นายวิชัย วิชัยวัฒนาพาณิชย์</td>
+      <td id="T_bd95c_row112_col2" class="data row112 col2" >5,193,227</td>
+      <td id="T_bd95c_row112_col3" class="data row112 col3" >5,193,227</td>
+      <td id="T_bd95c_row112_col4" class="data row112 col4" >0.0340%</td>
+      <td id="T_bd95c_row112_col5" class="data row112 col5" >-</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row113_col0" class="data row113 col0" >114</td>
+      <td id="T_bd95c_row113_col1" class="data row113 col1" >กองทุนเปิด ไทยพาณิชย์ SET50 INDEX เพื่อการเลี้ยงชีพ</td>
+      <td id="T_bd95c_row113_col2" class="data row113 col2" >5,223,500</td>
+      <td id="T_bd95c_row113_col3" class="data row113 col3" >5,154,900</td>
+      <td id="T_bd95c_row113_col4" class="data row113 col4" >0.0337%</td>
+      <td id="T_bd95c_row113_col5" class="data row113 col5" >▼ 68,600</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row114_col0" class="data row114 col0" >115</td>
+      <td id="T_bd95c_row114_col1" class="data row114 col1" >นายไชย พลภาณุมาศ</td>
+      <td id="T_bd95c_row114_col2" class="data row114 col2" >5,070,000</td>
+      <td id="T_bd95c_row114_col3" class="data row114 col3" >5,070,000</td>
+      <td id="T_bd95c_row114_col4" class="data row114 col4" >0.0332%</td>
+      <td id="T_bd95c_row114_col5" class="data row114 col5" >-</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row115_col0" class="data row115 col0" >116</td>
+      <td id="T_bd95c_row115_col1" class="data row115 col1" >นายศักดิ์ชัย ปัญญามีเสมอ</td>
+      <td id="T_bd95c_row115_col2" class="data row115 col2" >4,410,000</td>
+      <td id="T_bd95c_row115_col3" class="data row115 col3" >5,010,000</td>
+      <td id="T_bd95c_row115_col4" class="data row115 col4" >0.0328%</td>
+      <td id="T_bd95c_row115_col5" class="data row115 col5" >▲ 600,000</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row116_col0" class="data row116 col0" >117</td>
+      <td id="T_bd95c_row116_col1" class="data row116 col1" >นายกฤษณะ ปรีดานนท์</td>
+      <td id="T_bd95c_row116_col2" class="data row116 col2" >5,000,000</td>
+      <td id="T_bd95c_row116_col3" class="data row116 col3" >5,000,000</td>
+      <td id="T_bd95c_row116_col4" class="data row116 col4" >0.0327%</td>
+      <td id="T_bd95c_row116_col5" class="data row116 col5" >-</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row117_col0" class="data row117 col0" >118</td>
+      <td id="T_bd95c_row117_col1" class="data row117 col1" >นายภวดล เกลียวอรรคเดช</td>
+      <td id="T_bd95c_row117_col2" class="data row117 col2" >-</td>
+      <td id="T_bd95c_row117_col3" class="data row117 col3" >5,000,000</td>
+      <td id="T_bd95c_row117_col4" class="data row117 col4" >0.0327%</td>
+      <td id="T_bd95c_row117_col5" class="data row117 col5" >▲ 5,000,000</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row118_col0" class="data row118 col0" >119</td>
+      <td id="T_bd95c_row118_col1" class="data row118 col1" >นายวีรศักดิ์ คุนผลิน</td>
+      <td id="T_bd95c_row118_col2" class="data row118 col2" >5,000,000</td>
+      <td id="T_bd95c_row118_col3" class="data row118 col3" >5,000,000</td>
+      <td id="T_bd95c_row118_col4" class="data row118 col4" >0.0327%</td>
+      <td id="T_bd95c_row118_col5" class="data row118 col5" >-</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row119_col0" class="data row119 col0" >120</td>
+      <td id="T_bd95c_row119_col1" class="data row119 col1" >นายอนุชิต บุญช่วย</td>
+      <td id="T_bd95c_row119_col2" class="data row119 col2" >5,000,000</td>
+      <td id="T_bd95c_row119_col3" class="data row119 col3" >5,000,000</td>
+      <td id="T_bd95c_row119_col4" class="data row119 col4" >0.0327%</td>
+      <td id="T_bd95c_row119_col5" class="data row119 col5" >-</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row120_col0" class="data row120 col0" >121</td>
+      <td id="T_bd95c_row120_col1" class="data row120 col1" >นายเกษียร จงสฤษดิ์</td>
+      <td id="T_bd95c_row120_col2" class="data row120 col2" >4,990,000</td>
+      <td id="T_bd95c_row120_col3" class="data row120 col3" >4,990,000</td>
+      <td id="T_bd95c_row120_col4" class="data row120 col4" >0.0326%</td>
+      <td id="T_bd95c_row120_col5" class="data row120 col5" >-</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row121_col0" class="data row121 col0" >122</td>
+      <td id="T_bd95c_row121_col1" class="data row121 col1" >กองทุนผสมบีซีเนียร์สำหรับวัยเกษียณ</td>
+      <td id="T_bd95c_row121_col2" class="data row121 col2" >-</td>
+      <td id="T_bd95c_row121_col3" class="data row121 col3" >4,892,100</td>
+      <td id="T_bd95c_row121_col4" class="data row121 col4" >0.0320%</td>
+      <td id="T_bd95c_row121_col5" class="data row121 col5" >▲ 4,892,100</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row122_col0" class="data row122 col0" >123</td>
+      <td id="T_bd95c_row122_col1" class="data row122 col1" >กองทุนสำรองเลี้ยงชีพ พนักงานบริษัท การบินไทย จำกัด (มหาชน) ซึ่งจดทะเบียนแล้ว</td>
+      <td id="T_bd95c_row122_col2" class="data row122 col2" >4,207,500</td>
+      <td id="T_bd95c_row122_col3" class="data row122 col3" >4,874,600</td>
+      <td id="T_bd95c_row122_col4" class="data row122 col4" >0.0319%</td>
+      <td id="T_bd95c_row122_col5" class="data row122 col5" >▲ 667,100</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row123_col0" class="data row123 col0" >124</td>
+      <td id="T_bd95c_row123_col1" class="data row123 col1" >กองทุนเปิด กรุงไทย SET50</td>
+      <td id="T_bd95c_row123_col2" class="data row123 col2" >4,667,500</td>
+      <td id="T_bd95c_row123_col3" class="data row123 col3" >4,873,000</td>
+      <td id="T_bd95c_row123_col4" class="data row123 col4" >0.0319%</td>
+      <td id="T_bd95c_row123_col5" class="data row123 col5" >▲ 205,500</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row124_col0" class="data row124 col0" >125</td>
+      <td id="T_bd95c_row124_col1" class="data row124 col1" >บริษัท เมืองไทยประกันชีวิต จำกัด (มหาชน) โดย บลจ. ยูโอบี ( ประเทศไทย ) จำกัด</td>
+      <td id="T_bd95c_row124_col2" class="data row124 col2" >2,874,030</td>
+      <td id="T_bd95c_row124_col3" class="data row124 col3" >4,845,030</td>
+      <td id="T_bd95c_row124_col4" class="data row124 col4" >0.0317%</td>
+      <td id="T_bd95c_row124_col5" class="data row124 col5" >▲ 1,971,000</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row125_col0" class="data row125 col0" >126</td>
+      <td id="T_bd95c_row125_col1" class="data row125 col1" >กองทุนเปิด ไทยเด็กซ์เซ็ท 50 อีทีเอฟ</td>
+      <td id="T_bd95c_row125_col2" class="data row125 col2" >4,885,200</td>
+      <td id="T_bd95c_row125_col3" class="data row125 col3" >4,836,000</td>
+      <td id="T_bd95c_row125_col4" class="data row125 col4" >0.0316%</td>
+      <td id="T_bd95c_row125_col5" class="data row125 col5" >▼ 49,200</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row126_col0" class="data row126 col0" >127</td>
+      <td id="T_bd95c_row126_col1" class="data row126 col1" >กองทุนเปิด อีสท์สปริง JUMBO 25</td>
+      <td id="T_bd95c_row126_col2" class="data row126 col2" >4,851,800</td>
+      <td id="T_bd95c_row126_col3" class="data row126 col3" >4,804,400</td>
+      <td id="T_bd95c_row126_col4" class="data row126 col4" >0.0314%</td>
+      <td id="T_bd95c_row126_col5" class="data row126 col5" >▼ 47,400</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row127_col0" class="data row127 col0" >128</td>
+      <td id="T_bd95c_row127_col1" class="data row127 col1" >นายทรงชัย อัจฉริยหิรัญชัย</td>
+      <td id="T_bd95c_row127_col2" class="data row127 col2" >4,800,000</td>
+      <td id="T_bd95c_row127_col3" class="data row127 col3" >4,800,000</td>
+      <td id="T_bd95c_row127_col4" class="data row127 col4" >0.0314%</td>
+      <td id="T_bd95c_row127_col5" class="data row127 col5" >-</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row128_col0" class="data row128 col0" >129</td>
+      <td id="T_bd95c_row128_col1" class="data row128 col1" >นายอรรถวัติ ศิริสิทธิธงไชย</td>
+      <td id="T_bd95c_row128_col2" class="data row128 col2" >-</td>
+      <td id="T_bd95c_row128_col3" class="data row128 col3" >4,773,400</td>
+      <td id="T_bd95c_row128_col4" class="data row128 col4" >0.0312%</td>
+      <td id="T_bd95c_row128_col5" class="data row128 col5" >▲ 4,773,400</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row129_col0" class="data row129 col0" >130</td>
+      <td id="T_bd95c_row129_col1" class="data row129 col1" >กองทุนเปิด ยูไนเต็ด ตราสารทุน เพื่อการออม</td>
+      <td id="T_bd95c_row129_col2" class="data row129 col2" >3,444,600</td>
+      <td id="T_bd95c_row129_col3" class="data row129 col3" >4,761,900</td>
+      <td id="T_bd95c_row129_col4" class="data row129 col4" >0.0312%</td>
+      <td id="T_bd95c_row129_col5" class="data row129 col5" >▲ 1,317,300</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row130_col0" class="data row130 col0" >131</td>
+      <td id="T_bd95c_row130_col1" class="data row130 col1" >นายยงยุทธ เสถียรถิระกุล</td>
+      <td id="T_bd95c_row130_col2" class="data row130 col2" >4,697,559</td>
+      <td id="T_bd95c_row130_col3" class="data row130 col3" >4,697,559</td>
+      <td id="T_bd95c_row130_col4" class="data row130 col4" >0.0307%</td>
+      <td id="T_bd95c_row130_col5" class="data row130 col5" >-</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row131_col0" class="data row131 col0" >132</td>
+      <td id="T_bd95c_row131_col1" class="data row131 col1" >N.C.B.TRUST LIMITED-LEGAL & GENERAL ASSURANCE (PENSIONS MANAGEMENT) LIMITED</td>
+      <td id="T_bd95c_row131_col2" class="data row131 col2" >5,144,964</td>
+      <td id="T_bd95c_row131_col3" class="data row131 col3" >4,600,864</td>
+      <td id="T_bd95c_row131_col4" class="data row131 col4" >0.0301%</td>
+      <td id="T_bd95c_row131_col5" class="data row131 col5" >▼ 544,100</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row132_col0" class="data row132 col0" >133</td>
+      <td id="T_bd95c_row132_col1" class="data row132 col1" >กองทุนเปิด กรุงศรี SET100 เพื่อการเลี้ยงชีพ</td>
+      <td id="T_bd95c_row132_col2" class="data row132 col2" >4,555,200</td>
+      <td id="T_bd95c_row132_col3" class="data row132 col3" >4,591,800</td>
+      <td id="T_bd95c_row132_col4" class="data row132 col4" >0.0300%</td>
+      <td id="T_bd95c_row132_col5" class="data row132 col5" >▲ 36,600</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row133_col0" class="data row133 col0" >134</td>
+      <td id="T_bd95c_row133_col1" class="data row133 col1" >นายไกรศักดิ์ ทีปิวัฒน์</td>
+      <td id="T_bd95c_row133_col2" class="data row133 col2" >2,700,015</td>
+      <td id="T_bd95c_row133_col3" class="data row133 col3" >4,500,015</td>
+      <td id="T_bd95c_row133_col4" class="data row133 col4" >0.0294%</td>
+      <td id="T_bd95c_row133_col5" class="data row133 col5" >▲ 1,800,000</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row134_col0" class="data row134 col0" >135</td>
+      <td id="T_bd95c_row134_col1" class="data row134 col1" >นายเชษฐ์พงศ์ อนันตประกร</td>
+      <td id="T_bd95c_row134_col2" class="data row134 col2" >4,500,000</td>
+      <td id="T_bd95c_row134_col3" class="data row134 col3" >4,500,000</td>
+      <td id="T_bd95c_row134_col4" class="data row134 col4" >0.0294%</td>
+      <td id="T_bd95c_row134_col5" class="data row134 col5" >-</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row135_col0" class="data row135 col0" >136</td>
+      <td id="T_bd95c_row135_col1" class="data row135 col1" >กองทุนเปิด เค เซ็ท 50 เพื่อการเลี้ยงชีพ</td>
+      <td id="T_bd95c_row135_col2" class="data row135 col2" >4,515,100</td>
+      <td id="T_bd95c_row135_col3" class="data row135 col3" >4,446,100</td>
+      <td id="T_bd95c_row135_col4" class="data row135 col4" >0.0291%</td>
+      <td id="T_bd95c_row135_col5" class="data row135 col5" >▼ 69,000</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row136_col0" class="data row136 col0" >137</td>
+      <td id="T_bd95c_row136_col1" class="data row136 col1" >กองทัพเรือ</td>
+      <td id="T_bd95c_row136_col2" class="data row136 col2" >4,352,500</td>
+      <td id="T_bd95c_row136_col3" class="data row136 col3" >4,352,500</td>
+      <td id="T_bd95c_row136_col4" class="data row136 col4" >0.0285%</td>
+      <td id="T_bd95c_row136_col5" class="data row136 col5" >-</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row137_col0" class="data row137 col0" >138</td>
+      <td id="T_bd95c_row137_col1" class="data row137 col1" >นางปริยานุช เอกพินิจพิทยา</td>
+      <td id="T_bd95c_row137_col2" class="data row137 col2" >4,316,202</td>
+      <td id="T_bd95c_row137_col3" class="data row137 col3" >4,316,202</td>
+      <td id="T_bd95c_row137_col4" class="data row137 col4" >0.0282%</td>
+      <td id="T_bd95c_row137_col5" class="data row137 col5" >-</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row138_col0" class="data row138 col0" >139</td>
+      <td id="T_bd95c_row138_col1" class="data row138 col1" >นายณัฐพร จาตุศรีพิทักษ์</td>
+      <td id="T_bd95c_row138_col2" class="data row138 col2" >4,183,287</td>
+      <td id="T_bd95c_row138_col3" class="data row138 col3" >4,183,287</td>
+      <td id="T_bd95c_row138_col4" class="data row138 col4" >0.0274%</td>
+      <td id="T_bd95c_row138_col5" class="data row138 col5" >-</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row139_col0" class="data row139 col0" >140</td>
+      <td id="T_bd95c_row139_col1" class="data row139 col1" >HSBC BANK PLC-ADIA-HERA</td>
+      <td id="T_bd95c_row139_col2" class="data row139 col2" >4,166,588</td>
+      <td id="T_bd95c_row139_col3" class="data row139 col3" >4,166,588</td>
+      <td id="T_bd95c_row139_col4" class="data row139 col4" >0.0273%</td>
+      <td id="T_bd95c_row139_col5" class="data row139 col5" >-</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row140_col0" class="data row140 col0" >141</td>
+      <td id="T_bd95c_row140_col1" class="data row140 col1" >นางพิริยา อภิธโนทัย</td>
+      <td id="T_bd95c_row140_col2" class="data row140 col2" >4,103,000</td>
+      <td id="T_bd95c_row140_col3" class="data row140 col3" >4,103,000</td>
+      <td id="T_bd95c_row140_col4" class="data row140 col4" >0.0268%</td>
+      <td id="T_bd95c_row140_col5" class="data row140 col5" >-</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row141_col0" class="data row141 col0" >142</td>
+      <td id="T_bd95c_row141_col1" class="data row141 col1" >นางกรองทอง ชีวเกษมสุข</td>
+      <td id="T_bd95c_row141_col2" class="data row141 col2" >4,000,000</td>
+      <td id="T_bd95c_row141_col3" class="data row141 col3" >4,000,000</td>
+      <td id="T_bd95c_row141_col4" class="data row141 col4" >0.0262%</td>
+      <td id="T_bd95c_row141_col5" class="data row141 col5" >-</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row142_col0" class="data row142 col0" >143</td>
+      <td id="T_bd95c_row142_col1" class="data row142 col1" >กองทุนสำรองเลี้ยงชีพ พนักงานธนาคารทหารไทยธนชาต จำกัด (มหาชน) ซึ่งจดทะเบียนแล้ว</td>
+      <td id="T_bd95c_row142_col2" class="data row142 col2" >4,523,400</td>
+      <td id="T_bd95c_row142_col3" class="data row142 col3" >3,991,700</td>
+      <td id="T_bd95c_row142_col4" class="data row142 col4" >0.0261%</td>
+      <td id="T_bd95c_row142_col5" class="data row142 col5" >▼ 531,700</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row143_col0" class="data row143 col0" >144</td>
+      <td id="T_bd95c_row143_col1" class="data row143 col1" >น.ส.อุรศา ศรีบุญลือ</td>
+      <td id="T_bd95c_row143_col2" class="data row143 col2" >3,981,474</td>
+      <td id="T_bd95c_row143_col3" class="data row143 col3" >3,981,474</td>
+      <td id="T_bd95c_row143_col4" class="data row143 col4" >0.0260%</td>
+      <td id="T_bd95c_row143_col5" class="data row143 col5" >-</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row144_col0" class="data row144 col0" >145</td>
+      <td id="T_bd95c_row144_col1" class="data row144 col1" >กองทุนเปิด อีสท์สปริง SET50 เพื่อการเลี้ยงชีพ</td>
+      <td id="T_bd95c_row144_col2" class="data row144 col2" >4,187,000</td>
+      <td id="T_bd95c_row144_col3" class="data row144 col3" >3,973,300</td>
+      <td id="T_bd95c_row144_col4" class="data row144 col4" >0.0260%</td>
+      <td id="T_bd95c_row144_col5" class="data row144 col5" >▼ 213,700</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row145_col0" class="data row145 col0" >146</td>
+      <td id="T_bd95c_row145_col1" class="data row145 col1" >กองทุนส่วนบุคคล บริษัท ทีเอชจี พรีม่า ไทมส์ จำกัดโดย บริษัทหลักทรัพย์ ทรีนีตี้ จำกัด</td>
+      <td id="T_bd95c_row145_col2" class="data row145 col2" >1,500,000</td>
+      <td id="T_bd95c_row145_col3" class="data row145 col3" >3,969,600</td>
+      <td id="T_bd95c_row145_col4" class="data row145 col4" >0.0260%</td>
+      <td id="T_bd95c_row145_col5" class="data row145 col5" >▲ 2,469,600</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row146_col0" class="data row146 col0" >147</td>
+      <td id="T_bd95c_row146_col1" class="data row146 col1" >นายวีระ ศิริวงศ์วัฒนา</td>
+      <td id="T_bd95c_row146_col2" class="data row146 col2" >3,950,000</td>
+      <td id="T_bd95c_row146_col3" class="data row146 col3" >3,950,000</td>
+      <td id="T_bd95c_row146_col4" class="data row146 col4" >0.0258%</td>
+      <td id="T_bd95c_row146_col5" class="data row146 col5" >-</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row147_col0" class="data row147 col0" >148</td>
+      <td id="T_bd95c_row147_col1" class="data row147 col1" >นายณรงค์ คิ้วไพศาล</td>
+      <td id="T_bd95c_row147_col2" class="data row147 col2" >4,000,000</td>
+      <td id="T_bd95c_row147_col3" class="data row147 col3" >3,800,000</td>
+      <td id="T_bd95c_row147_col4" class="data row147 col4" >0.0249%</td>
+      <td id="T_bd95c_row147_col5" class="data row147 col5" >▼ 200,000</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row148_col0" class="data row148 col0" >149</td>
+      <td id="T_bd95c_row148_col1" class="data row148 col1" >นางโสภิดา ตรีวิศวเวทย์</td>
+      <td id="T_bd95c_row148_col2" class="data row148 col2" >3,786,728</td>
+      <td id="T_bd95c_row148_col3" class="data row148 col3" >3,786,728</td>
+      <td id="T_bd95c_row148_col4" class="data row148 col4" >0.0248%</td>
+      <td id="T_bd95c_row148_col5" class="data row148 col5" >-</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row149_col0" class="data row149 col0" >150</td>
+      <td id="T_bd95c_row149_col1" class="data row149 col1" >MACQUARIE BANK LIMITED SYDNEY-DBU</td>
+      <td id="T_bd95c_row149_col2" class="data row149 col2" >3,083,770</td>
+      <td id="T_bd95c_row149_col3" class="data row149 col3" >3,782,199</td>
+      <td id="T_bd95c_row149_col4" class="data row149 col4" >0.0247%</td>
+      <td id="T_bd95c_row149_col5" class="data row149 col5" >▲ 698,429</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row150_col0" class="data row150 col0" >151</td>
+      <td id="T_bd95c_row150_col1" class="data row150 col1" >บริษัท กรุงเทพประกันชีวิต จำกัด (มหาชน)</td>
+      <td id="T_bd95c_row150_col2" class="data row150 col2" >3,773,500</td>
+      <td id="T_bd95c_row150_col3" class="data row150 col3" >3,773,500</td>
+      <td id="T_bd95c_row150_col4" class="data row150 col4" >0.0247%</td>
+      <td id="T_bd95c_row150_col5" class="data row150 col5" >-</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row151_col0" class="data row151 col0" >152</td>
+      <td id="T_bd95c_row151_col1" class="data row151 col1" >น.ส.เพชรา ลิมป์ชวลิต</td>
+      <td id="T_bd95c_row151_col2" class="data row151 col2" >3,771,000</td>
+      <td id="T_bd95c_row151_col3" class="data row151 col3" >3,771,000</td>
+      <td id="T_bd95c_row151_col4" class="data row151 col4" >0.0247%</td>
+      <td id="T_bd95c_row151_col5" class="data row151 col5" >-</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row152_col0" class="data row152 col0" >153</td>
+      <td id="T_bd95c_row152_col1" class="data row152 col1" >นายวิสิทธิ์ กิตติวรรธนกุล</td>
+      <td id="T_bd95c_row152_col2" class="data row152 col2" >3,767,032</td>
+      <td id="T_bd95c_row152_col3" class="data row152 col3" >3,767,032</td>
+      <td id="T_bd95c_row152_col4" class="data row152 col4" >0.0246%</td>
+      <td id="T_bd95c_row152_col5" class="data row152 col5" >-</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row153_col0" class="data row153 col0" >154</td>
+      <td id="T_bd95c_row153_col1" class="data row153 col1" >กองทุนเปิด ยูไนเต็ด หุ้นไทยเพื่อความยั่งยืนแบบพิเศษ</td>
+      <td id="T_bd95c_row153_col2" class="data row153 col2" >1,301,300</td>
+      <td id="T_bd95c_row153_col3" class="data row153 col3" >3,755,900</td>
+      <td id="T_bd95c_row153_col4" class="data row153 col4" >0.0246%</td>
+      <td id="T_bd95c_row153_col5" class="data row153 col5" >▲ 2,454,600</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row154_col0" class="data row154 col0" >155</td>
+      <td id="T_bd95c_row154_col1" class="data row154 col1" >กองทุนเปิด อีสท์สปริง JUMBO 25 เพื่อการเลี้ยงชีพ</td>
+      <td id="T_bd95c_row154_col2" class="data row154 col2" >3,789,900</td>
+      <td id="T_bd95c_row154_col3" class="data row154 col3" >3,700,500</td>
+      <td id="T_bd95c_row154_col4" class="data row154 col4" >0.0242%</td>
+      <td id="T_bd95c_row154_col5" class="data row154 col5" >▼ 89,400</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row155_col0" class="data row155 col0" >156</td>
+      <td id="T_bd95c_row155_col1" class="data row155 col1" >นายวัฒน์ชัย มงคลศรีสวัสดิ</td>
+      <td id="T_bd95c_row155_col2" class="data row155 col2" >3,694,500</td>
+      <td id="T_bd95c_row155_col3" class="data row155 col3" >3,694,500</td>
+      <td id="T_bd95c_row155_col4" class="data row155 col4" >0.0242%</td>
+      <td id="T_bd95c_row155_col5" class="data row155 col5" >-</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row156_col0" class="data row156 col0" >157</td>
+      <td id="T_bd95c_row156_col1" class="data row156 col1" >กองทุนเปิด กรุงศรีหุ้นปันผล</td>
+      <td id="T_bd95c_row156_col2" class="data row156 col2" >6,476,000</td>
+      <td id="T_bd95c_row156_col3" class="data row156 col3" >3,650,200</td>
+      <td id="T_bd95c_row156_col4" class="data row156 col4" >0.0239%</td>
+      <td id="T_bd95c_row156_col5" class="data row156 col5" >▼ 2,825,800</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row157_col0" class="data row157 col0" >158</td>
+      <td id="T_bd95c_row157_col1" class="data row157 col1" >กองทุนสำรองเลี้ยงชีพ พนักงานการไฟฟ้าฝ่ายผลิตแห่งประเทศไทย ซึ่งจดทะเบียนแล้ว</td>
+      <td id="T_bd95c_row157_col2" class="data row157 col2" >5,047,300</td>
+      <td id="T_bd95c_row157_col3" class="data row157 col3" >3,628,100</td>
+      <td id="T_bd95c_row157_col4" class="data row157 col4" >0.0237%</td>
+      <td id="T_bd95c_row157_col5" class="data row157 col5" >▼ 1,419,200</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row158_col0" class="data row158 col0" >159</td>
+      <td id="T_bd95c_row158_col1" class="data row158 col1" >นายคมกาจ ประกอบผล</td>
+      <td id="T_bd95c_row158_col2" class="data row158 col2" >3,625,380</td>
+      <td id="T_bd95c_row158_col3" class="data row158 col3" >3,625,380</td>
+      <td id="T_bd95c_row158_col4" class="data row158 col4" >0.0237%</td>
+      <td id="T_bd95c_row158_col5" class="data row158 col5" >-</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row159_col0" class="data row159 col0" >160</td>
+      <td id="T_bd95c_row159_col1" class="data row159 col1" >นายชัยยงค์ ลีปริคณห์</td>
+      <td id="T_bd95c_row159_col2" class="data row159 col2" >3,610,000</td>
+      <td id="T_bd95c_row159_col3" class="data row159 col3" >3,610,000</td>
+      <td id="T_bd95c_row159_col4" class="data row159 col4" >0.0236%</td>
+      <td id="T_bd95c_row159_col5" class="data row159 col5" >-</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row160_col0" class="data row160 col0" >161</td>
+      <td id="T_bd95c_row160_col1" class="data row160 col1" >บริษัท วิริยะพรอพเพอร์ตี้ จำกัด</td>
+      <td id="T_bd95c_row160_col2" class="data row160 col2" >1,975,807</td>
+      <td id="T_bd95c_row160_col3" class="data row160 col3" >3,515,300</td>
+      <td id="T_bd95c_row160_col4" class="data row160 col4" >0.0230%</td>
+      <td id="T_bd95c_row160_col5" class="data row160 col5" >▲ 1,539,493</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row161_col0" class="data row161 col0" >162</td>
+      <td id="T_bd95c_row161_col1" class="data row161 col1" >นายธวัช ธนาวุฒิวัฒนา</td>
+      <td id="T_bd95c_row161_col2" class="data row161 col2" >3,493,987</td>
+      <td id="T_bd95c_row161_col3" class="data row161 col3" >3,493,987</td>
+      <td id="T_bd95c_row161_col4" class="data row161 col4" >0.0229%</td>
+      <td id="T_bd95c_row161_col5" class="data row161 col5" >-</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row162_col0" class="data row162 col0" >163</td>
+      <td id="T_bd95c_row162_col1" class="data row162 col1" >กองทุนเปิด อีสท์สปริง JUMBO 25 ปันผล</td>
+      <td id="T_bd95c_row162_col2" class="data row162 col2" >3,978,800</td>
+      <td id="T_bd95c_row162_col3" class="data row162 col3" >3,472,200</td>
+      <td id="T_bd95c_row162_col4" class="data row162 col4" >0.0227%</td>
+      <td id="T_bd95c_row162_col5" class="data row162 col5" >▼ 506,600</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row163_col0" class="data row163 col0" >164</td>
+      <td id="T_bd95c_row163_col1" class="data row163 col1" >กรุงเทพประกันชีวิต จำกัด (มหาชน) โดย บลจ.บัวหลวง จำกัด</td>
+      <td id="T_bd95c_row163_col2" class="data row163 col2" >3,627,600</td>
+      <td id="T_bd95c_row163_col3" class="data row163 col3" >3,469,300</td>
+      <td id="T_bd95c_row163_col4" class="data row163 col4" >0.0227%</td>
+      <td id="T_bd95c_row163_col5" class="data row163 col5" >▼ 158,300</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row164_col0" class="data row164 col0" >165</td>
+      <td id="T_bd95c_row164_col1" class="data row164 col1" >นายธนวัฒน์ ชยาภิรัต</td>
+      <td id="T_bd95c_row164_col2" class="data row164 col2" >3,395,000</td>
+      <td id="T_bd95c_row164_col3" class="data row164 col3" >3,395,000</td>
+      <td id="T_bd95c_row164_col4" class="data row164 col4" >0.0222%</td>
+      <td id="T_bd95c_row164_col5" class="data row164 col5" >-</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row165_col0" class="data row165 col0" >166</td>
+      <td id="T_bd95c_row165_col1" class="data row165 col1" >กองทุนเปิด ยูไนเต็ด หุ้นไทย ซัสเทนเนเบิล</td>
+      <td id="T_bd95c_row165_col2" class="data row165 col2" >1,111,600</td>
+      <td id="T_bd95c_row165_col3" class="data row165 col3" >3,304,000</td>
+      <td id="T_bd95c_row165_col4" class="data row165 col4" >0.0216%</td>
+      <td id="T_bd95c_row165_col5" class="data row165 col5" >▲ 2,192,400</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row166_col0" class="data row166 col0" >167</td>
+      <td id="T_bd95c_row166_col1" class="data row166 col1" >นายภิรมย์ ยศเมธา</td>
+      <td id="T_bd95c_row166_col2" class="data row166 col2" >3,303,668</td>
+      <td id="T_bd95c_row166_col3" class="data row166 col3" >3,303,668</td>
+      <td id="T_bd95c_row166_col4" class="data row166 col4" >0.0216%</td>
+      <td id="T_bd95c_row166_col5" class="data row166 col5" >-</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row167_col0" class="data row167 col0" >168</td>
+      <td id="T_bd95c_row167_col1" class="data row167 col1" >นายนันทวัฒน์ เดชสกุลชัยพัฒน์</td>
+      <td id="T_bd95c_row167_col2" class="data row167 col2" >3,300,000</td>
+      <td id="T_bd95c_row167_col3" class="data row167 col3" >3,300,000</td>
+      <td id="T_bd95c_row167_col4" class="data row167 col4" >0.0216%</td>
+      <td id="T_bd95c_row167_col5" class="data row167 col5" >-</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row168_col0" class="data row168 col0" >169</td>
+      <td id="T_bd95c_row168_col1" class="data row168 col1" >นายประเสริฐ ศรัทธาสุข</td>
+      <td id="T_bd95c_row168_col2" class="data row168 col2" >3,287,200</td>
+      <td id="T_bd95c_row168_col3" class="data row168 col3" >3,287,200</td>
+      <td id="T_bd95c_row168_col4" class="data row168 col4" >0.0215%</td>
+      <td id="T_bd95c_row168_col5" class="data row168 col5" >-</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row169_col0" class="data row169 col0" >170</td>
+      <td id="T_bd95c_row169_col1" class="data row169 col1" >นายอัศวิน คงสิริ</td>
+      <td id="T_bd95c_row169_col2" class="data row169 col2" >3,230,000</td>
+      <td id="T_bd95c_row169_col3" class="data row169 col3" >3,230,000</td>
+      <td id="T_bd95c_row169_col4" class="data row169 col4" >0.0211%</td>
+      <td id="T_bd95c_row169_col5" class="data row169 col5" >-</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row170_col0" class="data row170 col0" >171</td>
+      <td id="T_bd95c_row170_col1" class="data row170 col1" >บริษัท โลฟิส(ไทยแลนด์)จำกัด</td>
+      <td id="T_bd95c_row170_col2" class="data row170 col2" >3,169,500</td>
+      <td id="T_bd95c_row170_col3" class="data row170 col3" >3,169,500</td>
+      <td id="T_bd95c_row170_col4" class="data row170 col4" >0.0207%</td>
+      <td id="T_bd95c_row170_col5" class="data row170 col5" >-</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row171_col0" class="data row171 col0" >172</td>
+      <td id="T_bd95c_row171_col1" class="data row171 col1" >นายสันติ รังสิยาภรณ์รัตน์</td>
+      <td id="T_bd95c_row171_col2" class="data row171 col2" >3,166,275</td>
+      <td id="T_bd95c_row171_col3" class="data row171 col3" >3,166,275</td>
+      <td id="T_bd95c_row171_col4" class="data row171 col4" >0.0207%</td>
+      <td id="T_bd95c_row171_col5" class="data row171 col5" >-</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row172_col0" class="data row172 col0" >173</td>
+      <td id="T_bd95c_row172_col1" class="data row172 col1" >น.ส.ณิชยา พหูสูตร</td>
+      <td id="T_bd95c_row172_col2" class="data row172 col2" >3,153,790</td>
+      <td id="T_bd95c_row172_col3" class="data row172 col3" >3,153,790</td>
+      <td id="T_bd95c_row172_col4" class="data row172 col4" >0.0206%</td>
+      <td id="T_bd95c_row172_col5" class="data row172 col5" >-</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row173_col0" class="data row173 col0" >174</td>
+      <td id="T_bd95c_row173_col1" class="data row173 col1" >น.ส.คัคนางค์ สันธนะสุข</td>
+      <td id="T_bd95c_row173_col2" class="data row173 col2" >3,139,500</td>
+      <td id="T_bd95c_row173_col3" class="data row173 col3" >3,139,500</td>
+      <td id="T_bd95c_row173_col4" class="data row173 col4" >0.0205%</td>
+      <td id="T_bd95c_row173_col5" class="data row173 col5" >-</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row174_col0" class="data row174 col0" >175</td>
+      <td id="T_bd95c_row174_col1" class="data row174 col1" >นายสรพงษ์ ตั้งวิริยโรจน์กุล</td>
+      <td id="T_bd95c_row174_col2" class="data row174 col2" >3,100,106</td>
+      <td id="T_bd95c_row174_col3" class="data row174 col3" >3,100,106</td>
+      <td id="T_bd95c_row174_col4" class="data row174 col4" >0.0203%</td>
+      <td id="T_bd95c_row174_col5" class="data row174 col5" >-</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row175_col0" class="data row175 col0" >176</td>
+      <td id="T_bd95c_row175_col1" class="data row175 col1" >นางประไพวรรณ ลิมทรง</td>
+      <td id="T_bd95c_row175_col2" class="data row175 col2" >3,076,600</td>
+      <td id="T_bd95c_row175_col3" class="data row175 col3" >3,076,600</td>
+      <td id="T_bd95c_row175_col4" class="data row175 col4" >0.0201%</td>
+      <td id="T_bd95c_row175_col5" class="data row175 col5" >-</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row176_col0" class="data row176 col0" >177</td>
+      <td id="T_bd95c_row176_col1" class="data row176 col1" >กองทุนเปิด กรุงศรี Active SET50</td>
+      <td id="T_bd95c_row176_col2" class="data row176 col2" >3,013,000</td>
+      <td id="T_bd95c_row176_col3" class="data row176 col3" >3,013,000</td>
+      <td id="T_bd95c_row176_col4" class="data row176 col4" >0.0197%</td>
+      <td id="T_bd95c_row176_col5" class="data row176 col5" >-</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row177_col0" class="data row177 col0" >178</td>
+      <td id="T_bd95c_row177_col1" class="data row177 col1" >นายจักรพงษ์ โฆษิตเสถียรพงศ์</td>
+      <td id="T_bd95c_row177_col2" class="data row177 col2" >2,340,030</td>
+      <td id="T_bd95c_row177_col3" class="data row177 col3" >3,000,030</td>
+      <td id="T_bd95c_row177_col4" class="data row177 col4" >0.0196%</td>
+      <td id="T_bd95c_row177_col5" class="data row177 col5" >▲ 660,000</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row178_col0" class="data row178 col0" >179</td>
+      <td id="T_bd95c_row178_col1" class="data row178 col1" >นายณรงค์ เตชะนานาเลิศ</td>
+      <td id="T_bd95c_row178_col2" class="data row178 col2" >3,000,000</td>
+      <td id="T_bd95c_row178_col3" class="data row178 col3" >3,000,000</td>
+      <td id="T_bd95c_row178_col4" class="data row178 col4" >0.0196%</td>
+      <td id="T_bd95c_row178_col5" class="data row178 col5" >-</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row179_col0" class="data row179 col0" >180</td>
+      <td id="T_bd95c_row179_col1" class="data row179 col1" >นายแสวง เครือวิวัฒนกุล</td>
+      <td id="T_bd95c_row179_col2" class="data row179 col2" >3,000,000</td>
+      <td id="T_bd95c_row179_col3" class="data row179 col3" >3,000,000</td>
+      <td id="T_bd95c_row179_col4" class="data row179 col4" >0.0196%</td>
+      <td id="T_bd95c_row179_col5" class="data row179 col5" >-</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row180_col0" class="data row180 col0" >181</td>
+      <td id="T_bd95c_row180_col1" class="data row180 col1" >น.ส.ศรินทิพย์ สุนทรัช</td>
+      <td id="T_bd95c_row180_col2" class="data row180 col2" >3,000,000</td>
+      <td id="T_bd95c_row180_col3" class="data row180 col3" >3,000,000</td>
+      <td id="T_bd95c_row180_col4" class="data row180 col4" >0.0196%</td>
+      <td id="T_bd95c_row180_col5" class="data row180 col5" >-</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row181_col0" class="data row181 col0" >182</td>
+      <td id="T_bd95c_row181_col1" class="data row181 col1" >นายบรรพต หงษ์ทอง</td>
+      <td id="T_bd95c_row181_col2" class="data row181 col2" >3,000,000</td>
+      <td id="T_bd95c_row181_col3" class="data row181 col3" >3,000,000</td>
+      <td id="T_bd95c_row181_col4" class="data row181 col4" >0.0196%</td>
+      <td id="T_bd95c_row181_col5" class="data row181 col5" >-</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row182_col0" class="data row182 col0" >183</td>
+      <td id="T_bd95c_row182_col1" class="data row182 col1" >นางจันทร์ทิพย์ วานิช</td>
+      <td id="T_bd95c_row182_col2" class="data row182 col2" >3,000,000</td>
+      <td id="T_bd95c_row182_col3" class="data row182 col3" >3,000,000</td>
+      <td id="T_bd95c_row182_col4" class="data row182 col4" >0.0196%</td>
+      <td id="T_bd95c_row182_col5" class="data row182 col5" >-</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row183_col0" class="data row183 col0" >184</td>
+      <td id="T_bd95c_row183_col1" class="data row183 col1" >นายชาตรี สิทรัตตะกุล</td>
+      <td id="T_bd95c_row183_col2" class="data row183 col2" >3,000,000</td>
+      <td id="T_bd95c_row183_col3" class="data row183 col3" >3,000,000</td>
+      <td id="T_bd95c_row183_col4" class="data row183 col4" >0.0196%</td>
+      <td id="T_bd95c_row183_col5" class="data row183 col5" >-</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row184_col0" class="data row184 col0" ></td>
+      <td id="T_bd95c_row184_col1" class="data row184 col1" >รวมจำนวนหุ้น</td>
+      <td id="T_bd95c_row184_col2" class="data row184 col2" >12,871,704,837</td>
+      <td id="T_bd95c_row184_col3" class="data row184 col3" >13,092,746,059</td>
+      <td id="T_bd95c_row184_col4" class="data row184 col4" >85.6575%</td>
+      <td id="T_bd95c_row184_col5" class="data row184 col5" >▲ 221,041,222</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row185_col0" class="data row185 col0" ></td>
+      <td id="T_bd95c_row185_col1" class="data row185 col1" >อื่นๆ</td>
+      <td id="T_bd95c_row185_col2" class="data row185 col2" >2,413,295,163</td>
+      <td id="T_bd95c_row185_col3" class="data row185 col3" >2,192,253,941</td>
+      <td id="T_bd95c_row185_col4" class="data row185 col4" >14.3425%</td>
+      <td id="T_bd95c_row185_col5" class="data row185 col5" >▼ 221,041,222</td>
+    </tr>
+    <tr>
+      <td id="T_bd95c_row186_col0" class="data row186 col0" ></td>
+      <td id="T_bd95c_row186_col1" class="data row186 col1" >จำนวนหุ้นจดทะเบียน</td>
+      <td id="T_bd95c_row186_col2" class="data row186 col2" >15,285,000,000</td>
+      <td id="T_bd95c_row186_col3" class="data row186 col3" >15,285,000,000</td>
+      <td id="T_bd95c_row186_col4" class="data row186 col4" >100.0000%</td>
+      <td id="T_bd95c_row186_col5" class="data row186 col5" >-</td>
+    </tr>
+  </tbody>
+</table>
+
+                                </div>
+                            </div>
