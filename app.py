@@ -198,6 +198,24 @@ with tab2:
     periods_df = db.get_all_periods()
     if not periods_df.empty:
         st.dataframe(periods_df)
+        
+        st.markdown("---")
+        st.subheader("ลบข้อมูล")
+        with st.form("delete_period_form"):
+            col1, col2 = st.columns([3, 1])
+            with col1:
+                period_to_delete = st.selectbox("เลือกรอบข้อมูลที่ต้องการลบ", periods_df['period_name'].tolist())
+            with col2:
+                st.write("") # Spacing
+                st.write("") # Spacing
+                submit_delete = st.form_submit_button("🗑️ ลบข้อมูล", type="primary")
+                
+            if submit_delete:
+                if period_to_delete:
+                    db.delete_period(period_to_delete)
+                    st.success(f"ลบข้อมูลรอบ '{period_to_delete}' เรียบร้อยแล้ว!")
+                    time.sleep(1.5)
+                    st.rerun()
     else:
         st.info("ยังไม่มีข้อมูลในระบบ")
 
@@ -284,9 +302,9 @@ with tab1:
                         row_total['%'] = 100.00
                         
                         if len(ordered_periods) >= 2:
-                            row_sum[diff_col_name] = totals[period_new]['sum'] - totals[period_old]['sum']
-                            row_others[diff_col_name] = totals[period_new]['others'] - totals[period_old]['others']
-                            row_total[diff_col_name] = totals[period_new]['total'] - totals[period_old]['total']
+                            row_sum[diff_col_name] = None
+                            row_others[diff_col_name] = None
+                            row_total[diff_col_name] = None
                             
                         summary_df = pd.DataFrame([row_sum, row_others, row_total])
                         comp_df = pd.concat([comp_df, summary_df], ignore_index=True)
@@ -334,9 +352,9 @@ with tab1:
                             try:
                                 v = float(val)
                                 if v > 0:
-                                    return f"▲ {v:,.0f}"
+                                    return f'<div style="display:flex; justify-content:space-between;"><span>▲</span><span>{v:,.0f}</span></div>'
                                 elif v < 0:
-                                    return f"▼ {abs(v):,.0f}"
+                                    return f'<div style="display:flex; justify-content:space-between;"><span>▼</span><span>{abs(v):,.0f}</span></div>'
                                 return "-"
                             except:
                                 return str(val)
@@ -559,16 +577,10 @@ with tab1:
                             # Generate standalone shareable file
                             full_html = textwrap.dedent(f"""
                             <div style="font-family: 'Sarabun', sans-serif;">
-                                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
-                                    <div></div>
+                                <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 20px;">
                                     <div style="text-align: center;">
                                         <h2 style="color: #1e3a8a; margin-bottom: 5px;">ตารางเปรียบเทียบรายชื่อผู้ถือหุ้น BEM</h2>
                                         <p style="color: #64748b; margin-top: 0;">ณ วันปิดสมุดทะเบียน {latest_period}</p>
-                                    </div>
-                                    <div>
-                                        <button onclick="navigator.clipboard.writeText(window.location.href).then(() => alert('คัดลอกลิงก์เรียบร้อยแล้ว! สามารถส่งให้คนอื่นเพื่อเปิดหน้านี้ได้ทันทีครับ'));" style="padding: 10px 16px; background-color: #10b981; color: white; border: none; border-radius: 8px; font-size: 15px; font-weight: bold; cursor: pointer; box-shadow: 0 2px 4px rgba(0,0,0,0.1); transition: background-color 0.2s;">
-                                            🔗 คัดลอกลิงก์สำหรับแชร์
-                                        </button>
                                     </div>
                                 </div>
                                 {custom_css}
@@ -581,6 +593,9 @@ with tab1:
                                 f.write(full_html)
                                 
                             st.markdown(f'<a href="/?view=report" target="_blank" style="display: inline-block; padding: 10px 20px; background-color: #3b82f6; color: white; text-decoration: none; border-radius: 8px; font-weight: bold; margin-bottom: 20px;">🌐 เปิดหน้าวิวตารางสวยงาม (สำหรับแชร์)</a>', unsafe_allow_html=True)
+                            
+                            st.info("💡 **แชร์ตารางให้ผู้บริหารหรือทีมงาน:** ก๊อปปี้ลิงก์ด้านล่างนี้ส่งให้ได้เลยครับ (คนที่ได้รับลิงก์จะเห็นแค่ตาราง ไม่ต้องล็อกอินครับ)")
+                            st.code("https://shareholder-analytics-jirxoabos6p7vvqkq8njfe.streamlit.app/?view=report", language="text")
 
                             import openpyxl
                             from openpyxl.styles import Font, Alignment, Border, Side
@@ -668,7 +683,7 @@ with tab1:
                                             cell.number_format = '#,##0'
                                         elif 'เพิ่มขึ้น' in col_name or 'ลดลง' in col_name:
                                             # Excel conditional formatting via custom number format
-                                            cell.number_format = '[Color10]▲ #,##0;[Red]▼ -#,##0;"-"'
+                                            cell.number_format = '[Color10]▲* #,##0;[Red]▼* -#,##0;"-"'
                                 
                                 # Summary rows bolding (last 3 rows)
                                 for r_idx in range(max_row - 2, max_row + 1):

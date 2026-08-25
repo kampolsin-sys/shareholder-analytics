@@ -79,6 +79,15 @@ def create_user(username, password, role='user'):
     except Exception:
         return False
 
+def delete_period(period_name):
+    engine = get_engine()
+    with engine.begin() as conn:
+        period = conn.execute(text('SELECT id FROM periods WHERE period_name = :name'), {"name": period_name}).fetchone()
+        if period:
+            period_id = period[0]
+            conn.execute(text('DELETE FROM shareholders WHERE period_id = :pid'), {"pid": period_id})
+            conn.execute(text('DELETE FROM periods WHERE id = :pid'), {"pid": period_id})
+
 def delete_user(username):
     username = username.lower()
     engine = get_engine()
