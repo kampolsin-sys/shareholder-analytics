@@ -276,17 +276,6 @@ with tab1:
                         # Add Difference column if >= 2 periods
                         diff_col_name = 'เพิ่มขึ้น / (ลดลง)'
 
-                        def color_empty(val):
-                            if pd.isna(val) or val == 0 or val == "-":
-                                return "color: #9ca3af;"
-                            return ""
-                            
-                        cols_to_color = [c for c in comp_df.columns if c[1] in ["จำนวนหุ้น", "%"]]
-                        if hasattr(styled_df, "map"):
-                            styled_df = styled_df.map(color_empty, subset=cols_to_color)
-                        else:
-                            styled_df = styled_df.applymap(color_empty, subset=cols_to_color)
-                            
                         if len(ordered_periods) >= 2:
 
                             period_new = ordered_periods[-1] # latest
@@ -401,6 +390,17 @@ with tab1:
                             return [''] * len(row)
                         
                         styled_df = styled_df.apply(bold_summary, axis=1)
+                        
+                        def color_empty(val):
+                            if pd.isna(val) or val == 0 or val == "-":
+                                return "color: #9ca3af;"
+                            return ""
+                            
+                        cols_to_color = [c for c in comp_df.columns if c[1] in ["จำนวนหุ้น", "%"]]
+                        if hasattr(styled_df, "map"):
+                            styled_df = styled_df.map(color_empty, subset=cols_to_color)
+                        else:
+                            styled_df = styled_df.applymap(color_empty, subset=cols_to_color)
                         
                         if len(ordered_periods) >= 2:
                             def color_diff(val):
