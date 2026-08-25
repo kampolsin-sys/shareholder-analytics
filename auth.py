@@ -21,7 +21,7 @@ def login_page():
                 success, role = db.verify_login(username, password)
                 if success:
                     st.session_state['logged_in'] = True
-                    st.session_state['username'] = username
+                    st.session_state['username'] = username.lower()
                     st.session_state['role'] = role
                     st.rerun()
                 else:
