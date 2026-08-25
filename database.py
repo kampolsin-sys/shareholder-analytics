@@ -69,6 +69,7 @@ def hash_password(password):
     return hashlib.sha256(password.encode()).hexdigest()
 
 def create_user(username, password, role='user'):
+    username = username.lower()
     engine = get_engine()
     try:
         with engine.begin() as conn:
@@ -79,6 +80,7 @@ def create_user(username, password, role='user'):
         return False
 
 def delete_user(username):
+    username = username.lower()
     engine = get_engine()
     with engine.begin() as conn:
         conn.execute(text('DELETE FROM users WHERE username = :u'), {"u": username})
@@ -88,6 +90,7 @@ def get_all_users():
     return pd.read_sql('SELECT id, username, role FROM users', engine)
 
 def verify_login(username, password):
+    username = username.lower()
     engine = get_engine()
     with engine.connect() as conn:
         result = conn.execute(text('SELECT password_hash, role FROM users WHERE username = :u'), {"u": username}).fetchone()
@@ -176,38 +179,49 @@ def get_comparison_data(period_names, min_shares=0, filter_period=None):
         return pd.DataFrame()
         
     engine = get_engine()
-    # Safely format IN clause for SQLAlchemy text
-    bind_names = [f":p{i}" for i in range(len(period_names))]
-    bind_params = {f"p{i}": name for i, name in enumerate(period_names)}
+    
+    bind_params = {}
+    sum_cols = []
+    
+    for i, name in enumerate(period_names):
+        bind_params[f"p{i}"] = name
+        # Use conditional aggregation to pivot rows into columns in SQL
+        sum_cols.append(f'SUM(CASE WHEN p.period_name = :p{i} THEN s.total_shares ELSE 0 END) AS "{name}"')
+        
+    sum_cols_str = ",\n        ".join(sum_cols)
+    
+    # We must format the IN clause
+    bind_names_str = ",".join([f":p{i}" for i in range(len(period_names))])
+    
+    # Build HAVING clause based on filter_period or any period
+    if filter_period and filter_period in period_names:
+        idx = period_names.index(filter_period)
+        having_clause = f"HAVING SUM(CASE WHEN p.period_name = :p{idx} THEN s.total_shares ELSE 0 END) >= :min_shares"
+    else:
+        # If no specific filter_period, check if ANY period meets the min_shares
+        having_conds = [f"SUM(CASE WHEN p.period_name = :p{i} THEN s.total_shares ELSE 0 END) >= :min_shares" for i in range(len(period_names))]
+        having_clause = f"HAVING {' OR '.join(having_conds)}"
+        
+    bind_params['min_shares'] = min_shares
     
     query = text(f'''
-        SELECT p.period_name, s.full_name, s.total_shares
+        SELECT s.full_name,
+        {sum_cols_str}
         FROM shareholders s
         JOIN periods p ON s.period_id = p.id
-        WHERE p.period_name IN ({",".join(bind_names)})
+        WHERE p.period_name IN ({bind_names_str})
+        GROUP BY s.full_name
+        {having_clause}
     ''')
     
     with engine.connect() as conn:
         df = pd.read_sql(query, conn, params=bind_params)
-    
+        
     if df.empty:
         return df
         
-    pivot_df = df.pivot_table(
-        index='full_name', 
-        columns='period_name', 
-        values='total_shares', 
-        aggfunc='sum'
-    ).fillna(0)
-    
-    if filter_period and filter_period in pivot_df.columns:
-        mask = pivot_df[filter_period] >= min_shares
-    else:
-        mask = (pivot_df >= min_shares).any(axis=1)
-        
-    filtered_df = pivot_df[mask]
-    
-    return filtered_df
+    df.set_index('full_name', inplace=True)
+    return df
 
 def get_total_shares(period_name):
     engine = get_engine()
