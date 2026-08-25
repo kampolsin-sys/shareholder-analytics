@@ -628,9 +628,9 @@ with tab1:
                                 # 1. Title
                                 ws.merge_cells(start_row=1, start_column=1, end_row=2, end_column=max_col)
                                 title_cell = ws.cell(row=1, column=1)
-                                title_cell.value = f"ตารางเปรียบเทียบรายชื่อผู้ถือหุ้น\nณ วันปิดสมุดทะเบียน"
+                                title_cell.value = f"ตารางเปรียบเทียบรายชื่อผู้ถือหุ้น BEM ณ วันปิดสมุดทะเบียน {latest_period}"
                                 title_cell.font = Font(name='Sarabun', size=16, bold=True)
-                                title_cell.alignment = Alignment(horizontal='center', vertical='center', wrap_text=True)
+                                title_cell.alignment = Alignment(horizontal='center', vertical='center', wrap_text=False)
                                 
                                 # 2. Write headers manually
                                 current_top = None
