@@ -102,7 +102,6 @@ st.markdown("""
     #MainMenu {visibility: hidden;}
     .stAppDeployButton {display: none;}
     [data-testid="stToolbar"] {visibility: hidden;}
-    header {visibility: hidden;}
     footer {visibility: hidden;}
     [data-testid="stDataFrame"] {
         background-color: #ffffff;
