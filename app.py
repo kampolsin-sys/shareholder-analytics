@@ -393,7 +393,7 @@ with tab1:
                         
                         def color_empty(val):
                             if pd.isna(val) or val == 0 or val == "-":
-                                return "color: #9ca3af;"
+                                return "background-color: #f3f4f6; color: #9ca3af;"
                             return ""
                             
                         cols_to_color = [c for c in comp_df.columns if c[1] in ["จำนวนหุ้น", "%"]]
@@ -405,7 +405,7 @@ with tab1:
                         if len(ordered_periods) >= 2:
                             def color_diff(val):
                                 if pd.isna(val) or val == 0 or val == "-":
-                                    return 'color: #9ca3af;'
+                                    return 'background-color: #f3f4f6; color: #9ca3af;'
                                 try:
                                     v = float(val)
                                     if v > 0:
@@ -609,7 +609,7 @@ with tab1:
                             st.code("https://shareholder-analytics-jirxoabos6p7vvqkq8njfe.streamlit.app/?view=report", language="text")
 
                             import openpyxl
-                            from openpyxl.styles import Font, Alignment, Border, Side
+                            from openpyxl.styles import Font, Alignment, Border, Side, PatternFill
                             from openpyxl.utils import get_column_letter
 
                             buffer = io.BytesIO()
@@ -686,6 +686,12 @@ with tab1:
                                         cell.alignment = Alignment(horizontal='right', vertical='center')
                                         col_name = comp_df.columns[c_idx-1][1]
                                         
+                                        if cell.value == "-" or cell.value == 0 or cell.value is None or str(cell.value).strip() == "":
+                                            cell.value = "-"
+                                            cell.font = Font(name="Sarabun", size=11, color="9CA3AF")
+                                            cell.fill = PatternFill(start_color="F3F4F6", end_color="F3F4F6", fill_type="solid")
+                                            continue
+                                            
                                         if col_name == '%':
                                             cell.number_format = '0.000%'
                                             if isinstance(cell.value, (int, float)):
