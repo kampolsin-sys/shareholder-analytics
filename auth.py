@@ -4,7 +4,7 @@ import database as db
 import os
 
 def login_page():
-    logo_path = "/Volumes/Drive D/เด็กประกอบการ/Antigravity/ระบบเอกสารการประชุมคณะกรรมการ/02_BEM_Logo_EN_CMYK ตัดพื้นหลัง-01-02.png"
+    logo_path = "logo.png"
     
     col1, col2, col3 = st.columns([1, 2, 1])
     with col2:

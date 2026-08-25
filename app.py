@@ -27,7 +27,7 @@ def set_background(png_file):
         '''
         st.markdown(page_bg_img, unsafe_allow_html=True)
 
-BG_IMAGE_PATH = "/Volumes/Drive D/เด็กประกอบการ/Antigravity/เปรียบเทียบหุ้น/ChatGPT Image 25 ส.ค. 2569 10_16_10.png"
+BG_IMAGE_PATH = "bg.png"
 
 try:
     if "view" in st.query_params and st.query_params["view"] == "report":
@@ -72,7 +72,7 @@ if not st.session_state['logged_in']:
     st.stop()
     
 # --- SIDEBAR MENU ---
-logo_path = "/Volumes/Drive D/เด็กประกอบการ/Antigravity/ระบบเอกสารการประชุมคณะกรรมการ/02_BEM_Logo_EN_CMYK ตัดพื้นหลัง-01-02.png"
+logo_path = "logo.png"
 if os.path.exists(logo_path):
     if hasattr(st, "logo"):
         st.logo(logo_path)
