@@ -353,9 +353,9 @@ with tab1:
                             try:
                                 v = float(val)
                                 if v > 0:
-                                    return f'<div style="display:flex; justify-content:space-between;"><span>▲</span><span>{v:,.0f}</span></div>'
+                                    return f'<div style="display:flex; justify-content:space-between;"><span>⬆</span><span>{v:,.0f}</span></div>'
                                 elif v < 0:
-                                    return f'<div style="display:flex; justify-content:space-between;"><span>▼</span><span>-{abs(v):,.0f}</span></div>'
+                                    return f'<div style="display:flex; justify-content:space-between;"><span>⬇</span><span>-{abs(v):,.0f}</span></div>'
                                 return "-"
                             except:
                                 return str(val)
@@ -699,7 +699,7 @@ with tab1:
                                             cell.number_format = '#,##0'
                                         elif 'เพิ่มขึ้น' in col_name or 'ลดลง' in col_name:
                                             # Excel conditional formatting via custom number format
-                                            cell.number_format = '[Color10]▲* #,##0;[Red]▼* -#,##0;"-"'
+                                            cell.number_format = '[Color10]⬆* #,##0;[Red]⬇* -#,##0;"-"'
                                 
                                 # Summary rows bolding (last 3 rows)
                                 for r_idx in range(max_row - 2, max_row + 1):
