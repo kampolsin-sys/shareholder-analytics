@@ -727,3 +727,4 @@ with tab1:
                                 st.warning("⚠️ **ระบบตรวจพบความน่าจะเป็นของการเปลี่ยนชื่อ/คำนำหน้าของผู้ถือหุ้น (อ้างอิงจากรอบเก่าสุดและล่าสุด):**")
                                 for alert in alerts:
                                     st.markdown(f"- **{alert['old']}** ➡ **{alert['new']}** *(เหตุผล: {alert['reason']})*")
+# Force Streamlit Cloud to fully reboot and clear cache
