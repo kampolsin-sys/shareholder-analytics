@@ -721,7 +721,7 @@ with tab1:
                             )
 
                             # Name Change Alerts
-                            alerts = db.detect_name_changes(ordered_periods)
+                            alerts = db.detect_name_changes(ordered_periods, min_shares)
                             if alerts:
                                 st.markdown("<br>", unsafe_allow_html=True)
                                 st.warning("⚠️ **ระบบตรวจพบความน่าจะเป็นของการเปลี่ยนชื่อ/คำนำหน้าของผู้ถือหุ้น (อ้างอิงจากรอบเก่าสุดและล่าสุด):**")

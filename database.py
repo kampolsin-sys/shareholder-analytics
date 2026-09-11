@@ -243,7 +243,7 @@ def get_total_shares(period_name):
         '''), {"p": period_name}).scalar()
     return total if total else 0
 
-def detect_name_changes(period_names):
+def detect_name_changes(period_names, min_shares=0):
     if len(period_names) < 2:
         return []
     
@@ -255,11 +255,13 @@ def detect_name_changes(period_names):
     engine = get_engine()
     
     with engine.connect() as conn:
-        df1 = pd.read_sql(text('SELECT account_id, full_name FROM shareholders s JOIN periods p ON s.period_id = p.id WHERE p.period_name = :p'), conn, params={"p": p1})
-        df2 = pd.read_sql(text('SELECT account_id, full_name FROM shareholders s JOIN periods p ON s.period_id = p.id WHERE p.period_name = :p'), conn, params={"p": p2})
+        df1 = pd.read_sql(text('SELECT account_id, full_name, total_shares FROM shareholders s JOIN periods p ON s.period_id = p.id WHERE p.period_name = :p'), conn, params={"p": p1})
+        df2 = pd.read_sql(text('SELECT account_id, full_name, total_shares FROM shareholders s JOIN periods p ON s.period_id = p.id WHERE p.period_name = :p'), conn, params={"p": p2})
         
     df1['account_id'] = df1['account_id'].astype(str).str.strip().str.replace(r'\.0$', '', regex=True)
     df2['account_id'] = df2['account_id'].astype(str).str.strip().str.replace(r'\.0$', '', regex=True)
+    
+    df2_important = df2[df2['total_shares'] >= min_shares]
     
     acc_to_names1 = df1.groupby('account_id')['full_name'].apply(set).to_dict()
     acc_to_names2 = df2.groupby('account_id')['full_name'].apply(set).to_dict()
@@ -267,7 +269,9 @@ def detect_name_changes(period_names):
     alerts = []
     seen_alerts = set()
     
-    common_accs = set(acc_to_names1.keys()).intersection(set(acc_to_names2.keys()))
+    important_accs = set(df2_important['account_id'].dropna().unique())
+    common_accs = important_accs.intersection(set(acc_to_names1.keys()))
+    
     for acc in common_accs:
         if acc == 'nan' or acc == '' or acc == 'None': continue
         n1 = acc_to_names1[acc]
@@ -286,25 +290,47 @@ def detect_name_changes(period_names):
                         
     names1 = set(df1['full_name'].dropna().unique())
     names2 = set(df2['full_name'].dropna().unique())
+    
     disappeared = set([n for n in names1 if n not in names2])
-    appeared = set([n for n in names2 if n not in names1])
+    
+    important_names2 = set(df2_important['full_name'].dropna().unique())
+    appeared_important = set([n for n in important_names2 if n not in names1])
     
     for a in alerts:
         if a['old'] in disappeared: disappeared.remove(a['old'])
-        if a['new'] in appeared: appeared.remove(a['new'])
+        if a['new'] in appeared_important: appeared_important.remove(a['new'])
         
     import difflib
+    
+    appeared_index = {}
+    for new_name in appeared_important:
+        tokens = new_name.replace('-', ' ').split()
+        for t in tokens:
+            if len(t) >= 4:
+                if t not in appeared_index:
+                    appeared_index[t] = set()
+                appeared_index[t].add(new_name)
+                
     for old_name in list(disappeared):
-        for new_name in list(appeared):
+        tokens = old_name.replace('-', ' ').split()
+        candidates = set()
+        for t in tokens:
+            if len(t) >= 4 and t in appeared_index:
+                candidates.update(appeared_index[t])
+                
+        for new_name in candidates:
+            if abs(len(old_name) - len(new_name)) > 20:
+                continue
+                
             ratio = difflib.SequenceMatcher(None, old_name, new_name).ratio()
-            if ratio > 0.82:
+            if ratio > 0.85:
                 alerts.append({
                     'old': old_name,
                     'new': new_name,
                     'reason': f'ชื่อมีความคล้ายคลึงกัน ({int(ratio*100)}%)'
                 })
-                if old_name in disappeared: disappeared.remove(old_name)
-                if new_name in appeared: appeared.remove(new_name)
+                if new_name in appeared_important: 
+                    appeared_important.remove(new_name)
                 break
                 
     return alerts
