@@ -242,3 +242,60 @@ def get_total_shares(period_name):
             WHERE p.period_name = :p
         '''), {"p": period_name}).scalar()
     return total if total else 0
+
+
+def detect_name_changes(period_names):
+    if len(period_names) < 2:
+        return []
+    
+    p1 = period_names[0]
+    p2 = period_names[-1]
+    
+    engine = get_engine()
+    
+    with engine.connect() as conn:
+        df1 = pd.read_sql(text('SELECT account_id, full_name FROM shareholders s JOIN periods p ON s.period_id = p.id WHERE p.period_name = :p'), conn, params={"p": p1})
+        df2 = pd.read_sql(text('SELECT account_id, full_name FROM shareholders s JOIN periods p ON s.period_id = p.id WHERE p.period_name = :p'), conn, params={"p": p2})
+        
+    names1 = set(df1['full_name'].dropna().unique())
+    names2 = set(df2['full_name'].dropna().unique())
+    
+    disappeared = set([n for n in names1 if n not in names2])
+    appeared = set([n for n in names2 if n not in names1])
+    
+    alerts = []
+    
+    acc_to_names1 = df1.groupby('account_id')['full_name'].apply(set).to_dict()
+    acc_to_names2 = df2.groupby('account_id')['full_name'].apply(set).to_dict()
+    
+    common_accs = set(acc_to_names1.keys()).intersection(set(acc_to_names2.keys()))
+    for acc in common_accs:
+        if acc is None or str(acc).strip() == '': continue
+        n1 = acc_to_names1[acc]
+        n2 = acc_to_names2[acc]
+        for old_name in n1:
+            for new_name in n2:
+                if old_name != new_name and old_name in disappeared and new_name in appeared:
+                    alerts.append({
+                        'old': old_name,
+                        'new': new_name,
+                        'reason': 'อ้างอิงจากเลขทะเบียนผู้ถือหุ้นเดิม'
+                    })
+                    if old_name in disappeared: disappeared.remove(old_name)
+                    if new_name in appeared: appeared.remove(new_name)
+                    
+    import difflib
+    for old_name in list(disappeared):
+        for new_name in list(appeared):
+            ratio = difflib.SequenceMatcher(None, old_name, new_name).ratio()
+            if ratio > 0.82:
+                alerts.append({
+                    'old': old_name,
+                    'new': new_name,
+                    'reason': f'ชื่อมีความคล้ายคลึงกัน ({int(ratio*100)}%)'
+                })
+                if old_name in disappeared: disappeared.remove(old_name)
+                if new_name in appeared: appeared.remove(new_name)
+                break
+                
+    return alerts

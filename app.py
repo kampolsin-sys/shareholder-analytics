@@ -719,3 +719,11 @@ with tab1:
                                 file_name="shareholder_comparison.xlsx",
                                 mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
                             )
+
+                            # Name Change Alerts
+                            alerts = db.detect_name_changes(ordered_periods)
+                            if alerts:
+                                st.markdown("<br>", unsafe_allow_html=True)
+                                st.warning("⚠️ **ระบบตรวจพบความน่าจะเป็นของการเปลี่ยนชื่อ/คำนำหน้าของผู้ถือหุ้น (อ้างอิงจากรอบเก่าสุดและล่าสุด):**")
+                                for alert in alerts:
+                                    st.markdown(f"- **{alert['old']}** ➡ **{alert['new']}** *(เหตุผล: {alert['reason']})*")
