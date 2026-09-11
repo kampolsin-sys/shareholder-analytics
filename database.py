@@ -243,7 +243,6 @@ def get_total_shares(period_name):
         '''), {"p": period_name}).scalar()
     return total if total else 0
 
-
 def detect_name_changes(period_names):
     if len(period_names) < 2:
         return []
@@ -251,39 +250,49 @@ def detect_name_changes(period_names):
     p1 = period_names[0]
     p2 = period_names[-1]
     
+    from sqlalchemy import text
+    import pandas as pd
     engine = get_engine()
     
     with engine.connect() as conn:
         df1 = pd.read_sql(text('SELECT account_id, full_name FROM shareholders s JOIN periods p ON s.period_id = p.id WHERE p.period_name = :p'), conn, params={"p": p1})
         df2 = pd.read_sql(text('SELECT account_id, full_name FROM shareholders s JOIN periods p ON s.period_id = p.id WHERE p.period_name = :p'), conn, params={"p": p2})
         
-    names1 = set(df1['full_name'].dropna().unique())
-    names2 = set(df2['full_name'].dropna().unique())
-    
-    disappeared = set([n for n in names1 if n not in names2])
-    appeared = set([n for n in names2 if n not in names1])
-    
-    alerts = []
+    df1['account_id'] = df1['account_id'].astype(str).str.strip().str.replace(r'\.0$', '', regex=True)
+    df2['account_id'] = df2['account_id'].astype(str).str.strip().str.replace(r'\.0$', '', regex=True)
     
     acc_to_names1 = df1.groupby('account_id')['full_name'].apply(set).to_dict()
     acc_to_names2 = df2.groupby('account_id')['full_name'].apply(set).to_dict()
     
+    alerts = []
+    seen_alerts = set()
+    
     common_accs = set(acc_to_names1.keys()).intersection(set(acc_to_names2.keys()))
     for acc in common_accs:
-        if acc is None or str(acc).strip() == '': continue
+        if acc == 'nan' or acc == '' or acc == 'None': continue
         n1 = acc_to_names1[acc]
         n2 = acc_to_names2[acc]
         for old_name in n1:
             for new_name in n2:
-                if old_name != new_name and old_name in disappeared and new_name in appeared:
-                    alerts.append({
-                        'old': old_name,
-                        'new': new_name,
-                        'reason': 'อ้างอิงจากเลขทะเบียนผู้ถือหุ้นเดิม'
-                    })
-                    if old_name in disappeared: disappeared.remove(old_name)
-                    if new_name in appeared: appeared.remove(new_name)
-                    
+                if old_name != new_name:
+                    alert_key = f"{old_name}||{new_name}"
+                    if alert_key not in seen_alerts:
+                        alerts.append({
+                            'old': old_name,
+                            'new': new_name,
+                            'reason': 'อ้างอิงจากเลขทะเบียนผู้ถือหุ้นเดิม'
+                        })
+                        seen_alerts.add(alert_key)
+                        
+    names1 = set(df1['full_name'].dropna().unique())
+    names2 = set(df2['full_name'].dropna().unique())
+    disappeared = set([n for n in names1 if n not in names2])
+    appeared = set([n for n in names2 if n not in names1])
+    
+    for a in alerts:
+        if a['old'] in disappeared: disappeared.remove(a['old'])
+        if a['new'] in appeared: appeared.remove(a['new'])
+        
     import difflib
     for old_name in list(disappeared):
         for new_name in list(appeared):
